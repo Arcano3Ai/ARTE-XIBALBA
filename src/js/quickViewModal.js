@@ -54,12 +54,12 @@ export class QuickViewModal {
           ${product.aroma ? `
             <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 1.5rem;">
               <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-gold); margin-bottom: 0.6rem; font-weight: 600;">
-                Perfil Sensorial & Pirámide Olfativa
+                Composición Mineral & Talla Sagrada
               </div>
               <div style="font-size: 0.82rem; color: var(--color-beige); display: flex; flex-direction: column; gap: 0.35rem;">
-                <div><strong style="color: var(--color-gold-light);">Salida:</strong> ${product.aroma.salida}</div>
-                <div><strong style="color: var(--color-gold-light);">Corazón:</strong> ${product.aroma.corazon}</div>
-                <div><strong style="color: var(--color-gold-light);">Fondo:</strong> ${product.aroma.fondo}</div>
+                <div><strong style="color: var(--color-gold-light);">Material:</strong> ${product.aroma.salida}</div>
+                <div><strong style="color: var(--color-gold-light);">Engarce:</strong> ${product.aroma.corazon}</div>
+                <div><strong style="color: var(--color-gold-light);">Detalle:</strong> ${product.aroma.fondo}</div>
               </div>
             </div>
           ` : ''}

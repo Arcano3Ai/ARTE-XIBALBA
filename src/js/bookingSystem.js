@@ -1,4 +1,5 @@
 import { store } from './state.js';
+import { sendToFacebook } from './brand.js';
 import { EXPERIENCES } from '../data/experiences.js';
 
 export class BookingSystem {
@@ -70,7 +71,7 @@ export class BookingSystem {
       this.nextToStep2Btn.addEventListener('click', () => {
         const serviceVal = this.serviceSelect?.value;
         if (!serviceVal) {
-          alert('Por favor selecciona una experiencia o terapia.');
+          alert('Por favor selecciona el tipo de pieza o encargo.');
           return;
         }
         this.goToStep(2);
@@ -84,7 +85,7 @@ export class BookingSystem {
     if (this.nextToStep3Btn) {
       this.nextToStep3Btn.addEventListener('click', () => {
         if (!this.dateInput?.value) {
-          alert('Por favor selecciona una fecha para tu sesión.');
+          alert('Por favor selecciona una fecha para tu visita o llamada.');
           return;
         }
         if (!this.selectedTime) {
@@ -177,7 +178,7 @@ export class BookingSystem {
     const time = this.selectedTime;
 
     if (!name || !phone || !email) {
-      alert('Por favor ingresa tus datos de contacto para formalizar tu cita.');
+      alert('Por favor ingresa tus datos de contacto para formalizar tu encargo.');
       return;
     }
 
@@ -194,8 +195,14 @@ export class BookingSystem {
     }
 
     if (this.confirmedWaBtn) {
-      const waMsg = `Hola CHANTICO 🔥 Deseo confirmar mi reserva ${booking.id}:%0A• Experiencia: ${serviceName}%0A• Modalidad: ${modality}%0A• Fecha: ${date} a las ${time}%0A• Nombre: ${name}%0A• Teléfono: ${phone}`;
-      this.confirmedWaBtn.href = `https://wa.me/5218441228140?text=${waMsg}`;
+      const msg = `Hola Edgar, quiero confirmar mi encargo ${booking.id} en PAKAL TUN:\n• Pieza: ${serviceName}\n• Modalidad: ${modality}\n• Fecha: ${date} a las ${time}\n• Nombre: ${name}\n• Teléfono: ${phone}\n• Detalles: ${notes}`;
+      this.confirmedWaBtn.href = 'https://www.facebook.com/edgar.olvera.706671/photos';
+      this.confirmedWaBtn.onclick = (ev) => {
+        ev.preventDefault();
+        sendToFacebook(msg).then(copied => {
+          if (copied) alert('Tu solicitud quedó copiada. Pégala en el chat de Facebook de Edgar Olvera.');
+        });
+      };
     }
 
     this.goToStep(4);

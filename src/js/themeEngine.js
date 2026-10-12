@@ -1,6 +1,6 @@
 class ThemeEngine {
   constructor() {
-    const savedTheme = localStorage.getItem('chantico_theme');
+    const savedTheme = localStorage.getItem('pakaltun_theme');
     const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'dark'); // NÜMA default dark
   }
@@ -14,7 +14,7 @@ class ThemeEngine {
     this.currentTheme = theme;
     document.documentElement.setAttribute('data-theme', theme);
     document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('chantico_theme', theme);
+    localStorage.setItem('pakaltun_theme', theme);
 
     // Actualizar aria-label en botones de tema
     document.querySelectorAll('.theme-toggle-btn').forEach(btn => {

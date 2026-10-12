@@ -1,8 +1,8 @@
-// Estado Global y Persistencia en LocalStorage para CHANTICO
-const CART_STORAGE_KEY = 'chantico_cart_v1';
-const WISHLIST_STORAGE_KEY = 'chantico_wishlist_v1';
-const ORDERS_STORAGE_KEY = 'chantico_orders_v1';
-const BOOKINGS_STORAGE_KEY = 'chantico_bookings_v1';
+// Estado Global y Persistencia en LocalStorage para PAKAL TUN
+const CART_STORAGE_KEY = 'pakaltun_cart_v1';
+const WISHLIST_STORAGE_KEY = 'pakaltun_wishlist_v1';
+const ORDERS_STORAGE_KEY = 'pakaltun_orders_v1';
+const BOOKINGS_STORAGE_KEY = 'pakaltun_bookings_v1';
 
 class Store {
   constructor() {
@@ -103,11 +103,11 @@ class Store {
 
   applyCoupon(code) {
     const normalized = (code || '').trim().toUpperCase();
-    if (normalized === 'RITUAL15' || normalized === 'CHANTICO15' || normalized === 'FUEGOSAGRADO' || normalized === 'NUMAFRECUENCIA') {
+    if (normalized === 'PAKALTUN15' || normalized === 'JADE15') {
       this.coupon = normalized;
       this.discountPercent = 0.15; // 15% OFF
       this.notify();
-      return { success: true, message: '¡Cupón aplicado! 15% de descuento en tu compra sagrada.' };
+      return { success: true, message: '¡Cupón aplicado! 15% de descuento en tu pieza de autor PAKAL TUN.' };
     }
     return { success: false, message: 'El cupón ingresado no es válido o ha expirado.' };
   }

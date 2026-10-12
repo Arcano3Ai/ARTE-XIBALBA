@@ -1,13 +1,11 @@
 import { PRODUCTS } from '../data/products.js';
-import { RITUALS } from '../data/rituals.js';
 import { EXPERIENCES } from '../data/experiences.js';
 import { JOURNAL_POSTS } from '../data/journal.js';
 
 export class SearchModal {
-  constructor(openQuickViewCallback, openJournalCallback, openBreathingCallback) {
+  constructor(openQuickViewCallback, openJournalCallback) {
     this.openQuickView = openQuickViewCallback;
     this.openJournal = openJournalCallback;
-    this.openBreathing = openBreathingCallback;
 
     this.modalEl = document.getElementById('search-modal');
     this.closeBtn = document.getElementById('search-close-btn');
@@ -77,15 +75,11 @@ export class SearchModal {
       !q || p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.categoryLabel.toLowerCase().includes(q)
     );
 
-    const matchedRituals = RITUALS.filter(r => 
-      !q || r.title.toLowerCase().includes(q) || r.intention.toLowerCase().includes(q)
-    );
-
     const matchedJournal = JOURNAL_POSTS.filter(j => 
       !q || j.title.toLowerCase().includes(q) || j.category.toLowerCase().includes(q)
     );
 
-    if (matchedProducts.length === 0 && matchedRituals.length === 0 && matchedJournal.length === 0) {
+    if (matchedProducts.length === 0 && matchedJournal.length === 0) {
       this.resultsContainer.innerHTML = `
         <div style="text-align: center; padding: 2.5rem; color: var(--color-text-muted);">
           <p>No encontramos resultados para tu búsqueda.</p>
@@ -100,7 +94,7 @@ export class SearchModal {
       html += `
         <div style="margin-bottom: 1.5rem;">
           <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-gold); margin-bottom: 0.75rem;">
-            Productos de la Tienda (${matchedProducts.length})
+            Piezas de la Tienda (${matchedProducts.length})
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.6rem;">
             ${matchedProducts.slice(0, 4).map(p => `
@@ -122,31 +116,11 @@ export class SearchModal {
       `;
     }
 
-    if (matchedRituals.length > 0) {
-      html += `
-        <div style="margin-bottom: 1.5rem;">
-          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-gold); margin-bottom: 0.75rem;">
-            Rituales CHANTICO (${matchedRituals.length})
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-            ${matchedRituals.slice(0, 3).map(r => `
-              <div class="search-item-row" data-action="ritual" data-id="${r.id}" style="
-                padding: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--color-border); border-radius: var(--radius-sm); cursor: pointer;
-              ">
-                <div style="font-size: 0.9rem; color: var(--color-beige-light); font-family: var(--font-serif-display);">${r.title}</div>
-                <div style="font-size: 0.78rem; color: var(--color-gold-light);">${r.subtitle}</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `;
-    }
-
     if (matchedJournal.length > 0) {
       html += `
         <div>
           <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-gold); margin-bottom: 0.75rem;">
-            Journal Editorial (${matchedJournal.length})
+            Crónicas del Taller (${matchedJournal.length})
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.6rem;">
             ${matchedJournal.slice(0, 3).map(j => `
@@ -175,11 +149,6 @@ export class SearchModal {
           this.openQuickView(id);
         } else if (action === 'journal' && this.openJournal) {
           this.openJournal(id);
-        } else if (action === 'ritual') {
-          const ritualEl = document.getElementById('rituales');
-          const targetTab = document.querySelector(`.ritual-tab-btn[data-ritual-id="${id}"]`);
-          if (targetTab) targetTab.click();
-          if (ritualEl) ritualEl.scrollIntoView({ behavior: 'smooth' });
         }
       });
     });

@@ -1,4 +1,5 @@
 import { store } from './state.js';
+import { sendToFacebook } from './brand.js';
 
 export class CheckoutModal {
   constructor() {
@@ -135,9 +136,15 @@ export class CheckoutModal {
     }
 
     if (this.confirmationWaBtn) {
-      const itemsList = order.items.map(i => `• ${i.quantity}x ${i.name} ($${i.price * i.quantity} MXN)`).join('%0A');
-      const waMsg = `Hola CHANTICO 🔥 Acabo de realizar mi orden ${order.id} por $${order.total.toLocaleString('es-MX')} MXN.%0A%0AProductos:%0A${itemsList}%0A%0ACliente: ${name}%0ATel: ${phone}%0ADirección: ${address}, ${city}, ${state}.`;
-      this.confirmationWaBtn.href = `https://wa.me/5218441228140?text=${waMsg}`;
+      const itemsList = order.items.map(i => `• ${i.quantity}x ${i.name} (${i.price * i.quantity} MXN)`).join('\n');
+      const msg = `Hola Edgar, quiero confirmar mi pedido ${order.id} en PAKAL TUN por ${order.total.toLocaleString('es-MX')} MXN.\n\nPiezas:\n${itemsList}\n\nCliente: ${name}\nTel: ${phone}\nDirección: ${address}, ${city}, ${state}.`;
+      this.confirmationWaBtn.href = 'https://www.facebook.com/edgar.olvera.706671/photos';
+      this.confirmationWaBtn.onclick = (ev) => {
+        ev.preventDefault();
+        sendToFacebook(msg).then(copied => {
+          if (copied) alert('Tu pedido quedó copiado. Pégalo en el chat de Facebook de Edgar Olvera.');
+        });
+      };
     }
 
     this.goToStep(3);

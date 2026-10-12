@@ -90,7 +90,7 @@ export class CartDrawer {
         <div style="text-align: center; padding: 4rem 1rem; color: var(--color-text-muted);">
           <div style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.6;">✦</div>
           <p style="font-family: var(--font-serif-display); font-size: 1.1rem; color: var(--color-beige); margin-bottom: 0.5rem;">Tu carrito está en quietud</p>
-          <p style="font-size: 0.85rem; margin-bottom: 1.5rem;">Aún no has agregado herramientas o rituales para tu espacio.</p>
+          <p style="font-size: 0.85rem; margin-bottom: 1.5rem;">Aún no has agregado piezas a tu selección.</p>
           <a href="#tienda" class="btn btn-secondary btn-sm" onclick="document.getElementById('cart-close-btn').click();">EXPLORAR TIENDA</a>
         </div>
       `;
