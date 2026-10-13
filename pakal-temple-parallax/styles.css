@@ -672,42 +672,115 @@ body {
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .hud-header {
-    padding: 1rem 1.25rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .hud-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
   }
 
   .hud-subtitle {
     display: none;
   }
 
-  .btn-gallery-link span {
-    display: none;
+  .btn-sound-toggle {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .btn-gallery-link {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.72rem;
   }
 
   .altimeter-hud {
-    left: 1rem;
+    left: auto;
+    right: 1rem;
+    top: auto;
+    bottom: 1.25rem;
+    transform: none;
+    background: rgba(14, 11, 9, 0.85);
+    border: 1px solid var(--color-dark-border);
+    border-radius: 25px;
+    padding: 0.35rem 0.75rem;
+    backdrop-filter: blur(10px);
+    flex-direction: row;
+    gap: 0.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
   }
 
   .altimeter-track {
-    height: 120px;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  .altimeter-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-gold-sun) 0%, var(--color-jade-light) 100%);
+  }
+
+  .altimeter-data {
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+
+  .altimeter-label {
+    display: none;
+  }
+
+  .altimeter-value {
+    font-size: 0.78rem;
+  }
+
+  .story-section {
+    min-height: 90vh;
+    padding: 2.5rem 1rem;
   }
 
   .story-section[data-align="left"],
   .story-section[data-align="right"] {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     justify-content: center;
   }
 
   .story-card {
-    padding: 1.75rem 1.5rem;
+    padding: 1.6rem 1.35rem;
+    border-radius: 14px;
   }
 
   .story-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 
   .story-desc {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .story-quote {
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-story-cta {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.76rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .final-action-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .final-action-group a {
+    width: 100%;
+    text-align: center;
   }
 }
 

@@ -117,7 +117,7 @@ export const PRODUCTS = [
     badge: 'Artesanía Fina',
     image: './assets/images/pakal_tun_exhibidor_artesanal.png',
     tagline: 'Piezas individuales y juegos en jade, turquesa, coral, ámbar y plata.',
-    description: 'Selección de pulseras en sartales de piedras semipreciosas seleccionadas a mano y anillos tallados en jade, serpentina y plata. Disponibles en el taller de Morelos 654 (Agua Fría, Apodaca) y con envío seguro a todo el país.',
+    description: 'Selección de pulseras en sartales de piedras semipreciosas seleccionadas a mano y anillos tallados en jade, serpentina y plata. Disponibles en el taller sagrado de la Zona Oculta Maya y con envío seguro a todo el país.',
     aroma: {
       salida: 'Jade Auténtico, Turquesa & Ámbar',
       corazon: 'Talla Lapidaria a Medida',

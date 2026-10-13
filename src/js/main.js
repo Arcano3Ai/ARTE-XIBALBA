@@ -13,7 +13,7 @@ import { i18n } from '../i18n/i18nEngine.js';
 import { sendToFacebook } from './brand.js';
 import { initSoundPlayer } from './soundPlayer.js';
 import { PakalBotWidget } from './pakalBotWidget.js';
-import { initObsidianMirror } from './obsidianMirror.js';
+import { initObsidianMirror } from './obsidianMirrorEngine.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 0. Motor de tema (claro/oscuro) y sistema i18n
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Canvas de partículas del Hero con atmósfera de jade y oro
   initParticles('particles-canvas');
 
-  // 1B. Espejo de Obsidiana Interactivo (Tezcatlipoca Oráculo)
-  initObsidianMirror('obsidian-mirror-canvas');
+  // 1B. Espejo de Obsidiana Interactivo (Motor Original con 2400 partículas y Oráculo Tolteca)
+  initObsidianMirror();
 
   // 2. Modales y drawers
   let checkoutModal;

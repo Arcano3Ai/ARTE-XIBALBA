@@ -3,9 +3,9 @@ export const BRAND = {
   name: 'PAKAL TUN',
   artisan: 'Maestro Yax Balam',
   title: 'Maestro Lapidario & Escultor Prehispánico',
-  gallery: 'Galería y Taller del Maestro Yax Balam',
+  gallery: 'Galería y Taller del Maestro Yax Balam · Zona Oculta Maya',
   facebookUrl: 'https://www.facebook.com/sergio.perez.pakaltun/photos',
-  address: 'Morelos 654, Agua Fría, Apodaca, N.L.'
+  address: 'Zona Oculta Maya · Santuario Lapidario'
 };
 
 /**

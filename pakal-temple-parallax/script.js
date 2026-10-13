@@ -208,8 +208,15 @@
   function updateAltimeterHUD(p) {
     if (!DOM.altimeterFill || !DOM.altimeterValue) return;
 
-    // Porcentaje de la barra
-    DOM.altimeterFill.style.height = `${(p * 100).toFixed(1)}%`;
+    // Porcentaje de la barra (horizontal en móvil, vertical en desktop)
+    const pct = `${(p * 100).toFixed(1)}%`;
+    if (window.innerWidth <= 768) {
+      DOM.altimeterFill.style.width = pct;
+      DOM.altimeterFill.style.height = '100%';
+    } else {
+      DOM.altimeterFill.style.height = pct;
+      DOM.altimeterFill.style.width = '100%';
+    }
 
     // Metros actuales de ascensión (0m a 54m)
     const currentMeters = Math.round(p * CONFIG.maxAltitudeMeters);

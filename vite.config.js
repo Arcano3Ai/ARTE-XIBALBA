@@ -2,23 +2,35 @@ import { defineConfig } from 'vite';
 import fs from 'fs';
 import path from 'path';
 
-function copyMeditacionPlugin() {
+function copyFolderRecursive(src, dest) {
+  if (!fs.existsSync(src)) return;
+  if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyFolderRecursive(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
+function copyStaticExtrasPlugin() {
   return {
-    name: 'copy-meditacion-folder',
-    buildStart() {
-      const srcDir = path.resolve('meditacion_guiada');
-      const pubDir = path.resolve('public/meditacion_guiada');
-      if (fs.existsSync(srcDir)) {
-        if (!fs.existsSync(pubDir)) fs.mkdirSync(pubDir, { recursive: true });
-        const files = fs.readdirSync(srcDir);
-        for (const file of files) {
-          const srcFile = path.join(srcDir, file);
-          const destFile = path.join(pubDir, file);
-          if (fs.statSync(srcFile).isFile()) {
-            fs.copyFileSync(srcFile, destFile);
-          }
-        }
-      }
+    name: 'copy-static-extras',
+    closeBundle() {
+      const outDir = path.resolve('dist');
+      // Copiar pakal-temple-parallax a dist/pakal-temple-parallax
+      const templeSrc = path.resolve('pakal-temple-parallax');
+      const templeDest = path.join(outDir, 'pakal-temple-parallax');
+      copyFolderRecursive(templeSrc, templeDest);
+
+      // Copiar meditacion_guiada a dist/meditacion_guiada
+      const medSrc = path.resolve('meditacion_guiada');
+      const medDest = path.join(outDir, 'meditacion_guiada');
+      copyFolderRecursive(medSrc, medDest);
     }
   };
 }
@@ -27,7 +39,7 @@ export default defineConfig({
   base: './',
   root: '.',
   publicDir: 'public',
-  plugins: [copyMeditacionPlugin()],
+  plugins: [copyStaticExtrasPlugin()],
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

@@ -5,14 +5,14 @@ export const EXPERIENCES = [
     category: 'encargos',
     categoryTitle: 'ENCARGO DE AUTOR',
     tagline: 'Una pieza única, diseñada contigo y tallada a mano por el maestro Yax Balam.',
-    description: 'Eliges el mineral (jade, turquesa, obsidiana), el simbolismo (Pakal, jaguar, sol) y el largo del sartal. El maestro Yax Balam talla y engarza la pieza en su taller de Morelos 654, Agua Fría, Apodaca.',
+    description: 'Eliges el mineral (jade, turquesa, obsidiana), el simbolismo (Pakal, jaguar, sol) y el largo del sartal. El maestro Yax Balam talla y engarza la pieza en su taller sagrado de la Zona Oculta Maya.',
     image: './assets/images/pakal_tun_collar_jade.jpg',
     types: [
       {
         id: 'collar-medida-jade',
         title: 'Collar de Jadeíta con Máscara Tallada',
         duration: 'Según diseño',
-        modality: 'Taller Morelos 654 (Apodaca) o videollamada',
+        modality: 'Taller Zona Oculta Maya o videollamada',
         price: 3200,
         includes: [
           'Selección de jadeíta auténtica',
@@ -36,7 +36,7 @@ export const EXPERIENCES = [
         id: 'pieza-galeria-mosaico',
         title: 'Pectoral en Mosaico de Minerales',
         duration: 'Según diseño',
-        modality: 'Taller Morelos 654 (Apodaca) o videollamada',
+        modality: 'Taller Zona Oculta Maya o videollamada',
         price: 3400,
         includes: [
           'Diseño previo aprobado por ti',
@@ -60,7 +60,7 @@ export const EXPERIENCES = [
         id: 'sartal-anillo-medida',
         title: 'Sartal o Anillo Ajustado a tu Medida',
         duration: 'Según disponibilidad',
-        modality: 'Taller Morelos 654 (Apodaca) o envío',
+        modality: 'Taller Zona Oculta Maya o envío',
         price: 650,
         includes: [
           'Ajuste de talla en el momento',
