@@ -25,15 +25,17 @@ export function initParticles(canvasId = 'particles-canvas') {
   function createParticles() {
     particles = [];
     for (let i = 0; i < particleCount; i++) {
+      const isJade = Math.random() > 0.45; // 55% jade, 45% oro
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 1.8 + 0.5,
-        alpha: Math.random() * 0.5 + 0.15,
+        radius: isJade ? (Math.random() * 2.2 + 0.6) : (Math.random() * 1.6 + 0.5),
+        alpha: Math.random() * 0.5 + 0.18,
         speedX: (Math.random() - 0.5) * 0.35,
-        speedY: (Math.random() - 0.5) * 0.35 - 0.15, // Ligero movimiento ascendente
+        speedY: (Math.random() - 0.5) * 0.35 - 0.18, // Ligero movimiento ascendente
         pulseSpeed: Math.random() * 0.02 + 0.005,
-        pulseFactor: 0
+        pulseFactor: 0,
+        isJade
       });
     }
   }
@@ -69,9 +71,18 @@ export function initParticles(canvasId = 'particles-canvas') {
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 215, 0, ${safeAlpha})`;
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = 'rgba(255, 215, 0, 0.4)';
+
+      if (p.isJade) {
+        // Partícula de Jade Imperial Verde
+        ctx.fillStyle = `rgba(61, 170, 110, ${safeAlpha})`;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = 'rgba(61, 170, 110, 0.65)';
+      } else {
+        // Partícula de Oro Sagrado
+        ctx.fillStyle = `rgba(255, 183, 3, ${safeAlpha})`;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = 'rgba(255, 183, 3, 0.45)';
+      }
       ctx.fill();
     });
 

@@ -1,12 +1,12 @@
-/* Animaciones Sutiles y Refinadas NÜMA */
+/* Animaciones Sutiles y Refinadas — PAKAL TUN */
+
+/* ============================================================
+   ANIMACIONES BASE
+   ============================================================ */
 
 @keyframes goldShimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
 }
 
 @keyframes auraPulse {
@@ -27,54 +27,30 @@
     transform: scale(0.85);
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
   }
-  40% {
-    transform: scale(1.25);
-    box-shadow: 0 0 70px rgba(255, 215, 0, 0.6);
-  }
-  60% {
+  40%, 60% {
     transform: scale(1.25);
     box-shadow: 0 0 70px rgba(255, 215, 0, 0.6);
   }
 }
 
 @keyframes floatSubtle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
 }
 
 @keyframes soundWaveBar {
-  0%, 100% {
-    height: 15%;
-    opacity: 0.4;
-  }
-  50% {
-    height: 95%;
-    opacity: 1;
-  }
+  0%, 100% { height: 15%; opacity: 0.4; }
+  50%       { height: 95%; opacity: 1; }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-float {
-  animation: floatSubtle 6s ease-in-out infinite;
-}
+/* Clases utilitarias base */
+.animate-fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-float   { animation: floatSubtle 6s ease-in-out infinite; }
 
 .aura-halo {
   position: absolute;
@@ -84,20 +60,17 @@
   animation: auraPulse 8s ease-in-out infinite;
 }
 
-/* Efecto Shimmer en bordes o botones */
-.btn-gold-shimmer {
-  position: relative;
-  overflow: hidden;
-}
+/* Shimmer en botones */
+.btn-gold-shimmer { position: relative; overflow: hidden; }
 
 .btn-gold-shimmer::after {
   content: '';
   position: absolute;
-  top: 0;
+  inset: 0;
   left: -150%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
   transform: skewX(-20deg);
   transition: none;
 }
@@ -106,3 +79,137 @@
   left: 150%;
   transition: all 0.75s ease-in-out;
 }
+
+
+/* ============================================================
+   JADE ATMOSPHERE — Jadeíta guatemalteca y mexicana
+   ============================================================ */
+
+/* Pulso bioluminiscente del jade vivo */
+@keyframes jadePulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(26, 92, 58, 0.40), 0 0 30px rgba(61, 170, 110, 0.15);
+    opacity: 0.9;
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(61, 170, 110, 0.70), 0 0 60px rgba(26, 92, 58, 0.35);
+    opacity: 1;
+  }
+}
+
+/* Veta de luz interna: traslucidez del jade bajo luz */
+@keyframes jadeVein {
+  0%   { transform: translateX(-110%) skewX(-18deg); opacity: 0; }
+  15%  { opacity: 0.55; }
+  85%  { opacity: 0.55; }
+  100% { transform: translateX(210%) skewX(-18deg); opacity: 0; }
+}
+
+/* Aura mística expandiéndose y contrayéndose */
+@keyframes jadeAura {
+  0%, 100% { transform: scale(1) rotate(0deg);    opacity: 0.22; }
+  33%       { transform: scale(1.07) rotate(2deg);  opacity: 0.42; }
+  66%       { transform: scale(0.96) rotate(-1.5deg); opacity: 0.30; }
+}
+
+/* Flotación orgánica de las piezas */
+@keyframes jadeDrift {
+  0%, 100% { transform: translateY(0)    rotate(0deg); }
+  30%       { transform: translateY(-10px) rotate(0.8deg); }
+  70%       { transform: translateY(-5px)  rotate(-0.5deg); }
+}
+
+/* Shimmer jade que cruza botones/tarjetas */
+@keyframes jadeShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+/* Clases utilitarias jade */
+.jade-pulse   { animation: jadePulse 4s ease-in-out infinite; }
+.jade-drift   { animation: jadeDrift 7s ease-in-out infinite; }
+.jade-aura    { animation: jadeAura  9s ease-in-out infinite; }
+
+
+/* ============================================================
+   OBSIDIAN MIRROR — Espejo sagrado Tezcatlipoca / Nahualli
+   ============================================================ */
+
+/* Reflejo iridiscente que cruza la superficie */
+@keyframes obsidianSheen {
+  0%   { transform: translateX(-120%) translateY(-60%) rotate(-35deg); opacity: 0; }
+  10%  { opacity: 0.55; }
+  90%  { opacity: 0.55; }
+  100% { transform: translateX(140%) translateY(40%)  rotate(-35deg); opacity: 0; }
+}
+
+/* Parpadeo suave: el espejo "ve" entre mundos */
+@keyframes mirrorBlink {
+  0%, 88%, 100% { opacity: 1; }
+  91%            { opacity: 0.85; }
+  95%            { opacity: 0.97; }
+}
+
+/* Ondas concéntricas desde el centro */
+@keyframes mirrorRipple {
+  0%   { transform: scale(0.5); opacity: 0.65; }
+  100% { transform: scale(2.8); opacity: 0;    }
+}
+
+/* Orbita de glifos y anillos ceremoniales */
+@keyframes glyphOrbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes glyphOrbitReverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+/* Revelación desde la niebla volcánica */
+@keyframes mirrorReveal {
+  from {
+    opacity: 0;
+    filter: blur(14px) brightness(0.4);
+    transform: scale(0.90);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0)   brightness(1);
+    transform: scale(1);
+  }
+}
+
+/* Niebla volcánica pulsante alrededor del espejo */
+@keyframes obsidianFog {
+  0%, 100% { transform: scale(1)    translateY(0);   opacity: 0.30; }
+  50%       { transform: scale(1.14) translateY(-9px); opacity: 0.52; }
+}
+
+/* Destello de luz plateada sobre la obsidiana */
+@keyframes silverFlash {
+  0%   { opacity: 0; transform: rotate(-40deg) translateX(-100%); }
+  15%  { opacity: 0.45; }
+  85%  { opacity: 0.45; }
+  100% { opacity: 0; transform: rotate(-40deg) translateX(200%); }
+}
+
+/* Pulso de profundidad del espejo */
+@keyframes mirrorDepth {
+  0%, 100% {
+    filter: brightness(1) contrast(1);
+    box-shadow: 0 0 40px rgba(80,20,120,0.4), inset 0 0 60px rgba(0,0,0,0.7);
+  }
+  50% {
+    filter: brightness(1.08) contrast(1.05);
+    box-shadow: 0 0 70px rgba(100,40,180,0.6), inset 0 0 80px rgba(0,0,0,0.85);
+  }
+}
+
+/* Clases utilitarias obsidiana */
+.mirror-reveal   { animation: mirrorReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.mirror-blink    { animation: mirrorBlink  8s ease-in-out infinite; }
+.mirror-depth    { animation: mirrorDepth  6s ease-in-out infinite; }
+.glyph-orbit     { animation: glyphOrbit  28s linear infinite; }
+.glyph-orbit-rev { animation: glyphOrbitReverse 40s linear infinite; }

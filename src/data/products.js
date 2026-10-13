@@ -13,7 +13,7 @@ export const PRODUCTS = [
     badge: 'Pieza Insignia',
     image: './assets/images/pakal_tun_collar_jade.jpg',
     tagline: 'Pieza de autor en jadeíta verde con calaveras talladas y cuentas ceremoniales.',
-    description: 'Collar monumental de alta artesanía prehispánica creado por el maestro Melquiades Villarreal. Presenta un pectoral central con la icónica máscara funeraria de Pakal finamente tallada en jadeíta verde auténtica, escoltada por cuentas de obsidiana pulida, turquesa natural y calaveras de hueso esculpidas a mano. Una pieza de colección que encarna la soberanía y el cosmos maya.',
+    description: 'Collar monumental de alta artesanía prehispánica creado por el maestro Yax Balam. Presenta un pectoral central con la icónica máscara funeraria de Pakal finamente tallada en jadeíta verde auténtica, escoltada por cuentas de obsidiana pulida, turquesa natural y calaveras de hueso esculpidas a mano. Una pieza de colección que encarna la soberanía y el cosmos maya.',
     aroma: {
       salida: 'Jadeíta Genuina de Guatemala / México',
       corazon: 'Turquesa Natural & Obsidiana Negra',
@@ -145,11 +145,11 @@ export const PRODUCTS = [
     badge: 'Pieza de Colección',
     image: './assets/images/pakal_tun_exhibidor_artesanal.png',
     tagline: 'Gran medallón ceremonial tallado con iconografía ancestral y cuentas de serpentina.',
-    description: 'Magnífico pectoral inspirado en los discos sagrados y guerreros de la tradición mexica y tolteca. Una obra lapidaria de autor firmada por el maestro Melquiades Villarreal que rinde homenaje a los grandes maestros talladores del México antiguo.',
+    description: 'Magnífico pectoral inspirado en los discos sagrados y guerreros de la tradición mexica y tolteca. Una obra lapidaria de autor firmada por el maestro Yax Balam que rinde homenaje a los grandes maestros talladores del México antiguo.',
     aroma: {
       salida: 'Serpentina & Mosaico Lapidario',
       corazon: 'Iconografía Tradicional Ancestral',
-      fondo: 'Pieza de Autor por el Maestro Melquiades Villarreal'
+      fondo: 'Pieza de Autor por el Maestro Yax Balam'
     },
     experience: 'Centro de atención para coleccionistas, exposiciones y ceremonias tradicionales.',
     variants: [

@@ -195,12 +195,12 @@ export class BookingSystem {
     }
 
     if (this.confirmedWaBtn) {
-      const msg = `Hola Edgar, quiero confirmar mi encargo ${booking.id} en PAKAL TUN:\n• Pieza: ${serviceName}\n• Modalidad: ${modality}\n• Fecha: ${date} a las ${time}\n• Nombre: ${name}\n• Teléfono: ${phone}\n• Detalles: ${notes}`;
-      this.confirmedWaBtn.href = 'https://www.facebook.com/edgar.olvera.706671/photos';
+      const msg = `Saludos Maestro Yax Balam, quiero confirmar mi encargo ${booking.id} en PAKAL TUN:\n• Pieza: ${serviceName}\n• Modalidad: ${modality}\n• Fecha: ${date} a las ${time}\n• Nombre: ${name}\n• Teléfono: ${phone}\n• Detalles: ${notes}`;
+      this.confirmedWaBtn.href = 'https://www.facebook.com/sergio.perez.pakaltun/photos';
       this.confirmedWaBtn.onclick = (ev) => {
         ev.preventDefault();
         sendToFacebook(msg).then(copied => {
-          if (copied) alert('Tu solicitud quedó copiada. Pégala en el chat de Facebook de Edgar Olvera.');
+          if (copied) alert('Tu solicitud quedó copiada al portapapeles. Pégala en el chat de la Galería PAKAL TUN del Maestro Yax Balam.');
         });
       };
     }

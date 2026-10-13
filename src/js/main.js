@@ -13,6 +13,7 @@ import { i18n } from '../i18n/i18nEngine.js';
 import { sendToFacebook } from './brand.js';
 import { initSoundPlayer } from './soundPlayer.js';
 import { PakalBotWidget } from './pakalBotWidget.js';
+import { initObsidianMirror } from './obsidianMirror.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 0. Motor de tema (claro/oscuro) y sistema i18n
@@ -30,8 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 1. Canvas de partículas del Hero (fondo original)
+  // 1. Canvas de partículas del Hero con atmósfera de jade y oro
   initParticles('particles-canvas');
+
+  // 1B. Espejo de Obsidiana Interactivo (Tezcatlipoca Oráculo)
+  initObsidianMirror('obsidian-mirror-canvas');
 
   // 2. Modales y drawers
   let checkoutModal;
@@ -202,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else window.location.hash = '#tienda';
   });
 
-  // 8. Formulario de contacto -> Facebook de Edgar Olvera
+  // 8. Formulario de contacto -> Galería & Taller del Maestro Yax Balam
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -211,12 +215,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('contact-email')?.value.trim();
       const message = document.getElementById('contact-message')?.value.trim();
 
-      const text = `Hola Edgar, soy ${name} (${email}). Te escribo desde PAKAL TUN:\n\n${message}`;
+      const text = `Saludos Maestro Yax Balam, soy ${name} (${email}). Le escribo desde la Galería PAKAL TUN:\n\n${message}`;
       const copied = await sendToFacebook(text);
       contactForm.reset();
       alert(copied
-        ? 'Tu mensaje quedó copiado. Pégalo en el chat de Facebook de Edgar Olvera que acabamos de abrir.'
-        : 'Escríbele a Edgar Olvera en la página de Facebook que acabamos de abrir.');
+        ? 'Tu mensaje quedó copiado. Pégalo en el chat de la Galería PAKAL TUN del Maestro Yax Balam.'
+        : 'Escríbale al Maestro Yax Balam en la página de la Galería PAKAL TUN.');
     });
   }
 

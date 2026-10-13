@@ -56,6 +56,30 @@
   --color-border-gold-strong: #FFB703;
   --color-border-fire: rgba(230, 38, 36, 0.45);
 
+  /* --- JADE & OBSIDIANA (Minerales Sagrados Mesoamericanos) --- */
+  /* Jade: tonos de jadeíta guatemalteca y mexicana */
+  --color-jade:         #1A5C3A;
+  --color-jade-deep:    #123524;
+  --color-jade-mid:     #2A7A50;
+  --color-jade-light:   #3DAA6E;
+  --color-jade-glow:    rgba(26, 92, 58, 0.55);
+  --color-jade-shimmer: rgba(61, 170, 110, 0.30);
+  --color-jade-vein:    #0E2A1C;
+  --gradient-jade:      linear-gradient(135deg, #0E2A1C 0%, #1A5C3A 45%, #2A7A50 80%, #3DAA6E 100%);
+  --gradient-jade-radial: radial-gradient(circle at 40% 40%, rgba(61,170,110,0.28) 0%, rgba(26,92,58,0.18) 45%, transparent 70%);
+  --shadow-jade:        0 0 18px rgba(26, 92, 58, 0.55), 0 0 40px rgba(61,170,110,0.2);
+  --shadow-jade-hover:  0 0 28px rgba(61,170,110,0.65), 0 8px 30px rgba(14, 42, 28, 0.8);
+
+  /* Obsidiana: negro volcánico con reflejos iridiscentes */
+  --color-obsidian:        #0A0A0F;
+  --color-obsidian-glass:  rgba(8, 8, 14, 0.92);
+  --color-obsidian-sheen:  rgba(80, 20, 120, 0.25);   /* reflejo morado iridiscente */
+  --color-obsidian-silver: rgba(180, 180, 220, 0.12);  /* destello plateado */
+  --color-obsidian-border: rgba(100, 50, 160, 0.4);
+  --gradient-obsidian:     linear-gradient(135deg, #0A0A0F 0%, #1A0A2E 30%, #0D0D1A 60%, #080812 100%);
+  --gradient-obsidian-mirror: radial-gradient(ellipse at 35% 30%, rgba(120,60,200,0.18) 0%, rgba(60,20,100,0.08) 40%, rgba(0,0,0,0) 70%);
+  --shadow-obsidian:       0 0 30px rgba(80,20,120,0.35), 0 0 60px rgba(0,0,0,0.9);
+
   --color-success: #4E9A51;
   --color-error: #E62624;
 

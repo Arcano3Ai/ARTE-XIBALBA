@@ -15,7 +15,7 @@ export const JOURNAL_POSTS = [
       <p>“Pakal” significa <em>escudo</em> y “Tun” significa <em>piedra</em> en lengua maya. PAKAL TUN es, literalmente, el escudo de piedra: una forma de llevar contigo la protección y la belleza de la tradición lapidaria mesoamericana.</p>
 
       <h3>Del mosaico al collar</h3>
-      <p>Cada máscara, pectoral y sartal del taller del maestro Melquiades Villarreal se inspira en esa técnica: seleccionar la piedra, desgastarla a mano, pulirla hasta que adquiera brillo vítreo y engarzarla con paciencia.</p>
+      <p>Cada máscara, pectoral y sartal del taller del maestro Yax Balam se inspira en esa técnica: seleccionar la piedra, desgastarla a mano, pulirla hasta que adquiera brillo vítreo y engarzarla con paciencia.</p>
 
       <blockquote>“El jade no se fabrica: se descubre dentro de la piedra.”</blockquote>
     `
@@ -27,7 +27,7 @@ export const JOURNAL_POSTS = [
     categoryKey: 'guia',
     date: '28 de Septiembre, 2026',
     readTime: '5 min de lectura',
-    author: 'Maestro Melquiades Villarreal',
+    author: 'Maestro Yax Balam',
     image: './assets/images/pakal_tun_galeria_vitrina.jpg',
     excerpt: 'Peso, temperatura, translucidez y sonido: cuatro pruebas sencillas para distinguir la jadeíta genuina de vidrios y serpentinas.',
     content: `
@@ -74,7 +74,7 @@ export const JOURNAL_POSTS = [
     categoryKey: 'cuidado',
     date: '02 de Septiembre, 2026',
     readTime: '3 min de lectura',
-    author: 'Maestro Melquiades Villarreal',
+    author: 'Maestro Yax Balam',
     image: './assets/images/pakal_tun_collar_jade.jpg',
     excerpt: 'Un paño suave, agua tibia y un poco de cuidado: así tu collar conservará su brillo por generaciones.',
     content: `

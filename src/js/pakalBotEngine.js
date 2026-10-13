@@ -23,7 +23,7 @@ export function processBotQuery(rawInput) {
     norm.includes('creador') ||
     norm.includes('sergio') ||
     norm.includes('perez') ||
-    norm.includes('melquiades') ||
+    norm.includes('yax balam') ||
     norm.includes('villarreal') ||
     norm.includes('autor') ||
     norm.includes('artesano') ||
@@ -32,7 +32,7 @@ export function processBotQuery(rawInput) {
     norm.includes('quien lo hace')
   ) {
     return {
-      text: `👑 **Sergio Pérez & Maestro Melquiades Villarreal**\n\n• **Creador de PAKAL TUN:** La galería y visión de marca fue fundada por **Sergio Pérez**.\n• **Maestro Artesano Lapidario:** Cada pectoral, máscara y collar ceremonial es tallado a mano por el **maestro Melquiades Villarreal** en su taller en **Morelos 654, Agua Fría, Apodaca, N.L.**\n\nEl maestro Melquiades selecciona personalmente los bloques de jadeíta genuina (de Guatemala y México), turquesa y obsidiana volcánica para esculpir piezas únicas inspiradas en el esplendor de las culturas maya, tolteca y mexica.`,
+      text: `👑 **Sergio Pérez & Maestro Yax Balam**\n\n• **Creador de PAKAL TUN:** La galería y visión de marca fue fundada por **Sergio Pérez**.\n• **Maestro Artesano Lapidario:** Cada pectoral, máscara y collar ceremonial es tallado a mano por el **maestro Yax Balam** en su taller en **Morelos 654, Agua Fría, Apodaca, N.L.**\n\nEl maestro Yax Balam selecciona personalmente los bloques de jadeíta genuina (de Guatemala y México), turquesa y obsidiana volcánica para esculpir piezas únicas inspiradas en el esplendor de las culturas maya, tolteca y mexica.`,
       products: [PRODUCTS[0], PRODUCTS[1]],
       quickReplies: [
         'Ver collares de autor',
@@ -53,7 +53,7 @@ export function processBotQuery(rawInput) {
     norm.includes('marca')
   ) {
     return {
-      text: `🏛️ **PAKAL TUN: El Escudo de Piedra**\n\nEn lengua maya, *«Pakal»* significa **escudo** y *«Tun»* significa **piedra**. PAKAL TUN es el *Escudo de Piedra*: una galería de joyería prehispánica de autor creada por **Sergio Pérez** con piezas talladas a mano por el maestro **Melquiades Villarreal**.\n\nRendimos homenaje a la magnificencia de K'inich Janaab' Pakal creando pectorales monumentales, máscaras en mosaico y sartales finos para llevar la memoria viva de nuestras raíces.`,
+      text: `🏛️ **PAKAL TUN: El Escudo de Piedra**\n\nEn lengua maya, *«Pakal»* significa **escudo** y *«Tun»* significa **piedra**. PAKAL TUN es el *Escudo de Piedra*: una galería de joyería prehispánica de autor creada por **Sergio Pérez** con piezas talladas a mano por el maestro **Yax Balam**.\n\nRendimos homenaje a la magnificencia de K'inich Janaab' Pakal creando pectorales monumentales, máscaras en mosaico y sartales finos para llevar la memoria viva de nuestras raíces.`,
       products: [PRODUCTS[0], PRODUCTS[5]],
       quickReplies: [
         'Ver Máscara de Pakal en Jade',
@@ -76,7 +76,7 @@ export function processBotQuery(rawInput) {
     norm.includes('material')
   ) {
     return {
-      text: `💎 **Minerales Genuinos & Jadeíta Auténtica**\n\nEn PAKAL TUN no usamos imitaciones plásticas ni vidrios tintados. El maestro Melquiades Villarreal trabaja con:\n\n• **Jadeíta Genuina:** Piedra sagrada de Guatemala (valle del río Motagua) y yacimientos mexicanos. Fría al tacto, densa y de lustre vítreo.\n• **Turquesa Natural:** Piedra celeste asociada al fuego y la realeza.\n• **Obsidiana Pulida a Mano:** Vidrio volcánico negro y dorado.\n• **Lapislázuli & Ámbar:** Ensambles tradicionales de alta durabilidad.\n\nTodas las piezas cuentan con garantía de autenticidad mineral.`,
+      text: `💎 **Minerales Genuinos & Jadeíta Auténtica**\n\nEn PAKAL TUN no usamos imitaciones plásticas ni vidrios tintados. El maestro Yax Balam trabaja con:\n\n• **Jadeíta Genuina:** Piedra sagrada de Guatemala (valle del río Motagua) y yacimientos mexicanos. Fría al tacto, densa y de lustre vítreo.\n• **Turquesa Natural:** Piedra celeste asociada al fuego y la realeza.\n• **Obsidiana Pulida a Mano:** Vidrio volcánico negro y dorado.\n• **Lapislázuli & Ámbar:** Ensambles tradicionales de alta durabilidad.\n\nTodas las piezas cuentan con garantía de autenticidad mineral.`,
       products: [PRODUCTS[0], PRODUCTS[2]],
       quickReplies: [
         'Collar Pakal de Jade',
@@ -101,7 +101,7 @@ export function processBotQuery(rawInput) {
     norm.includes('morelos')
   ) {
     return {
-      text: `📍 **Taller del Maestro Melquiades Villarreal · PAKAL TUN**\n\nPuedes visitarnos directamente en nuestro taller físico:\n\n🏛️ **Taller de Joyería Prehispánica**\n📌 **Morelos 654, Agua Fría, Apodaca, N.L.**\n\nAquí el maestro Melquiades Villarreal realiza el tallado y labrado en vivo. Podrás apreciar las piezas terminadas, elegir tus minerales en bruto y acordar tu encargo a medida.`,
+      text: `📍 **Taller del Maestro Yax Balam · PAKAL TUN**\n\nPuedes visitarnos directamente en nuestro taller físico:\n\n🏛️ **Taller de Joyería Prehispánica**\n📌 **Morelos 654, Agua Fría, Apodaca, N.L.**\n\nAquí el maestro Yax Balam realiza el tallado y labrado en vivo. Podrás apreciar las piezas terminadas, elegir tus minerales en bruto y acordar tu encargo a medida.`,
       products: [PRODUCTS[0], PRODUCTS[4]],
       quickReplies: [
         'Horarios y contacto',
@@ -122,7 +122,7 @@ export function processBotQuery(rawInput) {
     norm.includes('cotiz')
   ) {
     return {
-      text: `✨ **Piezas de Autor a Medida**\n\nEl maestro Melquiades Villarreal talla piezas exclusivas bajo encargo:\n\n1. **Selección del Mineral:** Eliges el tipo y tono de jade (verde esmeralda, jade imperial, corteza), turquesa u obsidiana.\n2. **Diseño de la Efigie:** Máscara de Pakal, rostro solar mexica, jaguar u orla ceremonial.\n3. **Calibre y Longitud:** Sartal adaptado a tu complexión y porte.\n\nPuedes solicitar tu encargo desde la sección **ENCARGOS** o visitando el taller en Morelos 654, Agua Fría, Apodaca.`,
+      text: `✨ **Piezas de Autor a Medida**\n\nEl maestro Yax Balam talla piezas exclusivas bajo encargo:\n\n1. **Selección del Mineral:** Eliges el tipo y tono de jade (verde esmeralda, jade imperial, corteza), turquesa u obsidiana.\n2. **Diseño de la Efigie:** Máscara de Pakal, rostro solar mexica, jaguar u orla ceremonial.\n3. **Calibre y Longitud:** Sartal adaptado a tu complexión y porte.\n\nPuedes solicitar tu encargo desde la sección **ENCARGOS** o visitando el taller en Morelos 654, Agua Fría, Apodaca.`,
       products: [PRODUCTS[0], PRODUCTS[5]],
       quickReplies: [
         'Ir a la sección de Encargos',
@@ -212,10 +212,10 @@ export function processBotQuery(rawInput) {
     norm.includes('inicio')
   ) {
     return {
-      text: `👋 **¡Saludos! Bienvenido a PAKAL TUN**\n\nSoy tu **Guía de Joyería Prehispánica**. Te acompaño a descubrir las creaciones lapidarias en jade, turquesa y obsidiana talladas a mano por el **maestro Melquiades Villarreal** para la galería de **Sergio Pérez**.\n\n¿En qué te puedo asesorar hoy?\n• 📿 Descubrir nuestros **collares y pectorales ceremoniales**.\n• 💎 Conocer sobre el **jade auténtico** y sus yacimientos.\n• 📍 Visitar el **taller en Morelos 654, Agua Fría, Apodaca, N.L.**\n• ✨ Solicitar un **encargo personalizado a tu medida**.`,
+      text: `👋 **¡Saludos! Bienvenido a PAKAL TUN**\n\nSoy tu **Guía de Joyería Prehispánica**. Te acompaño a descubrir las creaciones lapidarias en jade, turquesa y obsidiana talladas a mano por el **maestro Yax Balam** para la galería del **Maestro Yax Balam**.\n\n¿En qué te puedo asesorar hoy?\n• 📿 Descubrir nuestros **collares y pectorales ceremoniales**.\n• 💎 Conocer sobre el **jade auténtico** y sus yacimientos.\n• 📍 Visitar el **taller en Morelos 654, Agua Fría, Apodaca, N.L.**\n• ✨ Solicitar un **encargo personalizado a tu medida**.`,
       products: [PRODUCTS[0], PRODUCTS[1]],
       quickReplies: [
-        '¿Quién es Melquiades Villarreal?',
+        '¿Quién es Yax Balam?',
         'Ver collares de jade',
         '¿Dónde está el taller?',
         'Tengo un cupón de descuento'
@@ -225,10 +225,10 @@ export function processBotQuery(rawInput) {
 
   // 10. RESPUESTA POR DEFECTO ORIENTADA
   return {
-    text: `🌿 Estoy aquí para ayudarte a explorar el arte lapidario de **PAKAL TUN**, creado por **Sergio Pérez** y tallado por el **maestro Melquiades Villarreal**.\n\nPuedes preguntarme por:\n• **Piezas:** *"Collar de Pakal"*, *"Pectorales"*, *"Pulseras y anillos"*.\n• **Materiales:** *"¿Cómo saber si el jade es auténtico?"*, *"Turquesa y obsidiana"*.\n• **Taller y creador:** *"¿Quién es Melquiades Villarreal?"*, *"¿Dónde queda el taller?"*.\n• **Encargos:** *"¿Hacen piezas a medida?"*.`,
+    text: `🌿 Estoy aquí para ayudarte a explorar el arte lapidario de **PAKAL TUN**, creado por **Sergio Pérez** y tallado por el **maestro Yax Balam**.\n\nPuedes preguntarme por:\n• **Piezas:** *"Collar de Pakal"*, *"Pectorales"*, *"Pulseras y anillos"*.\n• **Materiales:** *"¿Cómo saber si el jade es auténtico?"*, *"Turquesa y obsidiana"*.\n• **Taller y creador:** *"¿Quién es Yax Balam?"*, *"¿Dónde queda el taller?"*.\n• **Encargos:** *"¿Hacen piezas a medida?"*.`,
     products: [PRODUCTS[0], PRODUCTS[1]],
     quickReplies: [
-      '¿Quién es Melquiades Villarreal?',
+      '¿Quién es Yax Balam?',
       'Ver Collares de Autor',
       'Visitar el taller en Apodaca',
       '¿El jade es auténtico?'

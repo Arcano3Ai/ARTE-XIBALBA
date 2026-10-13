@@ -4,8 +4,8 @@ export const EXPERIENCES = [
     name: 'Collar Ceremonial a Medida',
     category: 'encargos',
     categoryTitle: 'ENCARGO DE AUTOR',
-    tagline: 'Una pieza única, diseñada contigo y tallada a mano por el maestro Melquiades Villarreal.',
-    description: 'Eliges el mineral (jade, turquesa, obsidiana), el simbolismo (Pakal, jaguar, sol) y el largo del sartal. El maestro Melquiades Villarreal talla y engarza la pieza en su taller de Morelos 654, Agua Fría, Apodaca.',
+    tagline: 'Una pieza única, diseñada contigo y tallada a mano por el maestro Yax Balam.',
+    description: 'Eliges el mineral (jade, turquesa, obsidiana), el simbolismo (Pakal, jaguar, sol) y el largo del sartal. El maestro Yax Balam talla y engarza la pieza en su taller de Morelos 654, Agua Fría, Apodaca.',
     image: './assets/images/pakal_tun_collar_jade.jpg',
     types: [
       {

@@ -1,8 +1,9 @@
 // Identidad y canales de contacto oficiales de PAKAL TUN
 export const BRAND = {
   name: 'PAKAL TUN',
-  artisan: 'Maestro Melquiades Villarreal',
-  creator: 'Sergio Pérez',
+  artisan: 'Maestro Yax Balam',
+  title: 'Maestro Lapidario & Escultor Prehispánico',
+  gallery: 'Galería y Taller del Maestro Yax Balam',
   facebookUrl: 'https://www.facebook.com/sergio.perez.pakaltun/photos',
   address: 'Morelos 654, Agua Fría, Apodaca, N.L.'
 };
