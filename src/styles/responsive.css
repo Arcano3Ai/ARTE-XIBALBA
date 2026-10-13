@@ -105,6 +105,14 @@ html, body {
     margin-left: auto;
   }
 
+  .header-desktop-only {
+    display: none !important;
+  }
+
+  #pakal-music-player {
+    display: none !important;
+  }
+
   .btn-icon {
     width: 36px;
     height: 36px;

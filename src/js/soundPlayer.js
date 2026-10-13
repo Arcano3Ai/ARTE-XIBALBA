@@ -19,7 +19,7 @@ export function initSoundPlayer() {
       bottom: 24px;
       left: 24px;
       z-index: 999;
-      display: flex;
+      display: none !important; /* Oculto por defecto a petición del usuario para no estorbar */
       align-items: center;
       gap: 10px;
       padding: 8px 16px 8px 10px;
