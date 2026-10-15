@@ -1,6 +1,6 @@
 ﻿/**
- * CHANTICO ÔÇö Motor Sagrado del Espejo de Obsidiana (Or├ículo Tolteca & V├│rtice Receptivo)
- * Part├¡culas orbitales, rasterizador oracular din├ímico a 60 FPS y s├¡ntesis Web Audio API (432 Hz).
+ * CHANTICO — Motor Sagrado del Espejo de Obsidiana (Oráculo Tolteca & Vórtice Receptivo)
+ * Partículas orbitales, rasterizador oracular dinámico a 60 FPS y síntesis Web Audio API (432 Hz).
  */
 
 export function initObsidianMirror() {
@@ -14,7 +14,7 @@ export function initObsidianMirror() {
   const quickPrompts = document.querySelectorAll('.obsidian-quick-prompt');
   const consultBtn = document.getElementById('obsidianConsultBtn');
 
-  // Tarjeta de revelaci├│n oracular viva
+  // Tarjeta de revelación oracular viva
   const revealCard = document.getElementById('obsidianOracleReveal');
   const revealBadge = revealCard?.querySelector('.obsidian-reveal-badge');
   const revealKeyword = document.getElementById('obsidianRevealKeyword');
@@ -58,7 +58,7 @@ export function initObsidianMirror() {
   };
 
   /* =========================================================================
-     1. WEB AUDIO API SAGRADO (Dron 432 Hz + Arm├│nicos Toltecas + Cuencos)
+     1. WEB AUDIO API SAGRADO (Dron 432 Hz + Armónicos Toltecas + Cuencos)
      ========================================================================= */
   let audioCtx = null;
   let isAudioActive = false;
@@ -81,7 +81,7 @@ export function initObsidianMirror() {
       filter.frequency.setValueAtTime(520, audioCtx.currentTime);
       filter.connect(masterGain);
 
-      // 432 Hz Drone (Frecuencia de Sanaci├│n del Fuego)
+      // 432 Hz Drone (Frecuencia de Sanación del Fuego)
       droneOsc = audioCtx.createOscillator();
       droneOsc.type = 'sine';
       droneOsc.frequency.setValueAtTime(432, audioCtx.currentTime);
@@ -91,7 +91,7 @@ export function initObsidianMirror() {
       droneOsc.connect(droneGain);
       droneGain.connect(filter);
 
-      // 108 Hz Sub-arm├│nico terrenal
+      // 108 Hz Sub-armónico terrenal
       subOsc = audioCtx.createOscillator();
       subOsc.type = 'sine';
       subOsc.frequency.setValueAtTime(108, audioCtx.currentTime);
@@ -136,12 +136,12 @@ export function initObsidianMirror() {
     if (isAudioActive) {
       if (masterGain) masterGain.gain.linearRampToValueAtTime(0.0001, audioCtx.currentTime + 0.6);
       isAudioActive = false;
-      if (soundIcon) soundIcon.textContent = '­ƒöç';
+      if (soundIcon) soundIcon.textContent = '🔇';
       if (soundLabel) soundLabel.textContent = 'Resonancia (432Hz Silenciada)';
     } else {
       if (masterGain) masterGain.gain.linearRampToValueAtTime(0.35, audioCtx.currentTime + 1.0);
       isAudioActive = true;
-      if (soundIcon) soundIcon.textContent = '­ƒöö';
+      if (soundIcon) soundIcon.textContent = '🔊';
       if (soundLabel) soundLabel.textContent = 'Resonancia (432Hz Activa)';
       playTibetanBowl(432, 4.0);
     }
@@ -152,7 +152,7 @@ export function initObsidianMirror() {
   }
 
   /* =========================================================================
-     2. REESCALADO Y SISTEMA DE PART├ìCULAS
+     2. REESCALADO Y SISTEMA DE PARTÍCULAS
      ========================================================================= */
   function resizeCanvas() {
     const rect = canvas.getBoundingClientRect();
@@ -226,9 +226,9 @@ export function initObsidianMirror() {
         }
         this.alpha = Math.min(1.0, this.alpha + 0.06);
       } else {
-        // Si estamos en gathering pero esta part├¡cula no forma parte del texto:
+        // Si estamos en gathering pero esta partícula no forma parte del texto:
         if (oracleState === 'gathering') {
-          // Atenuar y empujar suavemente hacia la corona exterior para dar m├íximo contraste al centro
+          // Atenuar y empujar suavemente hacia la corona exterior para dar máximo contraste al centro
           this.alpha = Math.max(0.12, this.alpha * 0.94);
           const fromCenterX = this.x - orbCenter;
           const fromCenterY = this.y - orbCenter;
@@ -273,7 +273,7 @@ export function initObsidianMirror() {
       this.x += this.vx;
       this.y += this.vy;
 
-      // Interacci├│n con ondas de choque
+      // Interacción con ondas de choque
       for (let i = 0; i < shockwaves.length; i++) {
         const sw = shockwaves[i];
         const sdx = this.x - sw.x;
@@ -288,7 +288,7 @@ export function initObsidianMirror() {
         }
       }
 
-      // Restricci├│n al per├¡metro circular de la obsidiana
+      // Restricción al perímetro circular de la obsidiana
       const fromCenterX = this.x - orbCenter;
       const fromCenterY = this.y - orbCenter;
       const distFromCenter = Math.sqrt(fromCenterX * fromCenterX + fromCenterY * fromCenterY);
@@ -335,68 +335,68 @@ export function initObsidianMirror() {
   }
 
   /* =========================================================================
-     3. RASTERIZADOR Y CAT├üLOGO DE REVELACIONES TOLTECAS
+     3. RASTERIZADOR Y CATÁLOGO DE REVELACIONES TOLTECAS
      ========================================================================= */
   const TOLTEC_REVELATIONS = [
     {
       keyword: "MIRA HACIA ADENTRO",
-      meaning: "La respuesta que buscas en el mundo exterior ya habita en el silencio de tu propio coraz├│n. Det├®n el ruido del pensamiento y escucha tu intuici├│n m├ís profunda.",
+      meaning: "La respuesta que buscas en el mundo exterior ya habita en el silencio de tu propio corazón. Detén el ruido del pensamiento y escucha tu intuición más profunda.",
       element: "Fuego Interior",
-      guide: "Tezcatlipoca ┬À El Espejo Humeante"
+      guide: "Tezcatlipoca · El Espejo Humeante"
     },
     {
       keyword: "TRANSFORMA LA SOMBRA",
-      meaning: "Aquello que rechazas o temes en ti mismo es tu mayor reserva de fuerza espiritual. No huyas de tu sombra; abr├ízala para convertirla en medicina y sabidur├¡a.",
+      meaning: "Aquello que rechazas o temes en ti mismo es tu mayor reserva de fuerza espiritual. No huyas de tu sombra; abrázala para convertirla en medicina y sabiduría.",
       element: "Obsidiana & Humo",
-      guide: "Ocelotl ┬À Jaguar Sagrado"
+      guide: "Ocelotl · Jaguar Sagrado"
     },
     {
       keyword: "DESPIERTA EL NAHUAL",
-      meaning: "Es momento de trascender la visi├│n ordinaria de tu realidad. Tu guardi├ín espiritual te impulsa a dar un salto de valent├¡a, lucidez y transmutaci├│n.",
+      meaning: "Es momento de trascender la visión ordinaria de tu realidad. Tu guardián espiritual te impulsa a dar un salto de valentía, lucidez y transmutación.",
       element: "Viento & Serpiente",
-      guide: "Quetzalc├│atl ┬À Aliento de Sabidur├¡a"
+      guide: "Quetzalcóatl · Aliento de Sabiduría"
     },
     {
       keyword: "SILENCIA EL EGO",
-      meaning: "La necesidad constante de control y validaci├│n es solo un reflejo distorsionado. Cuando aquietas la mente, el camino del guerrero se revela con nitidez.",
-      element: "Agua M├¡stica",
-      guide: "Chantico ┬À Fuego del Hogar"
+      meaning: "La necesidad constante de control y validación es solo un reflejo distorsionado. Cuando aquietas la mente, el camino del guerrero se revela con nitidez.",
+      element: "Agua Mística",
+      guide: "Chantico · Fuego del Hogar"
     },
     {
       keyword: "AVANZA SIN MIEDO",
-      meaning: "La indecisi├│n paraliza el poder del esp├¡ritu. Todo el linaje de tus ancestros camina a tu lado: da el paso que has postergado con plena determinaci├│n.",
+      meaning: "La indecisión paraliza el poder del espíritu. Todo el linaje de tus ancestros camina a tu lado: da el paso que has postergado con plena determinación.",
       element: "Llama Solar",
-      guide: "Tonatiuh ┬À Fuerza Guerrera"
+      guide: "Tonatiuh · Fuerza Guerrera"
     },
     {
-      keyword: "CONF├ìA EN EL VAC├ìO",
-      meaning: "Lo que parece p├®rdida es espacio sagrado para lo que renace. No temas soltar lo que ya cumpli├│ su ciclo; el universo llena el vac├¡o con gracia.",
-      element: "├ëter Tolteca",
-      guide: "Tloque Nahuaque ┬À El Que Todo lo Abarca"
+      keyword: "CONFÍA EN EL VACÍO",
+      meaning: "Lo que parece pérdida es espacio sagrado para lo que renace. No temas soltar lo que ya cumplió su ciclo; el universo llena el vacío con gracia.",
+      element: "Éter Tolteca",
+      guide: "Tloque Nahuaque · El Que Todo lo Abarca"
     },
     {
       keyword: "HONRA TU PALABRA",
-      meaning: "Tu palabra es un decreto c├│smico que moldea tu destino. Habla con absoluta impecabilidad, sin juzgarte y cumpliendo tus acuerdos ├¡ntimos.",
+      meaning: "Tu palabra es un decreto cósmico que moldea tu destino. Habla con absoluta impecabilidad, sin juzgarte y cumpliendo tus acuerdos íntimos.",
       element: "Palabra Florida",
-      guide: "In Xochitl In Cuicatl ┬À Flor y Canto"
+      guide: "In Xochitl In Cuicatl · Flor y Canto"
     },
     {
       keyword: "FUEGO SAGRADO",
       meaning: "El fuego sagrado de Chantico purifica las memorias de dolor. Permite que la alquimia interior consuma tus apegos para que renazcas en libertad.",
-      element: "Llama de Transmutaci├│n",
-      guide: "Chantico ┬À Guardiana del Fuego"
+      element: "Llama de Transmutación",
+      guide: "Chantico · Guardiana del Fuego"
     },
     {
       keyword: "RETORNA A TU CENTRO",
-      meaning: "Has estado dispersando tu atenci├│n en exigencias ajenas. Vuelve a tu eje vital, respira el instante presente y recupera tu calma fundamental.",
+      meaning: "Has estado dispersando tu atención en exigencias ajenas. Vuelve a tu eje vital, respira el instante presente y recupera tu calma fundamental.",
       element: "Tierra Madre",
-      guide: "Coatlicue ┬À Matriz de Sanaci├│n"
+      guide: "Coatlicue · Matriz de Sanación"
     },
     {
       keyword: "FLORECE EN EL CAOS",
-      meaning: "Las mayores transmutaciones del alma ocurren en medio del movimiento inesperado. No intentes detener el torbellino; aprende a volar con ├®l.",
+      meaning: "Las mayores transmutaciones del alma ocurren en medio del movimiento inesperado. No intentes detener el torbellino; aprende a volar con él.",
       element: "Viento Sagrado",
-      guide: "Eh├®catl ┬À Viento C├│smico"
+      guide: "Ehécatl · Viento Cósmico"
     }
   ];
 
@@ -425,7 +425,7 @@ export function initObsidianMirror() {
       lines.push(words.slice(mid).join(' '));
     }
 
-    // Auto-ajuste de tama├▒o proporcional al di├ímetro seguro del orbe
+    // Auto-ajuste de tamaño proporcional al diámetro seguro del orbe
     const maxSafeWidth = w * 0.70;
     let fontSize = Math.floor(w * (lines.length > 2 ? 0.082 : lines.length > 1 ? 0.096 : 0.118));
     const spacingPx = Math.max(3, Math.floor(fontSize * 0.1));
@@ -492,28 +492,28 @@ export function initObsidianMirror() {
     if (!audioCtx) initAudio();
     if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
 
-    // Seleccionar revelaci├│n oracular sabia
+    // Seleccionar revelación oracular sabia
     const revelation = TOLTEC_REVELATIONS[Math.floor(Math.random() * TOLTEC_REVELATIONS.length)];
 
     triggerShockwave(orbCenter, orbCenter);
     if (isAudioActive) playTibetanBowl(432, 5.0);
 
-    // Feedback visual en el bot├│n y en la tarjeta de revelaci├│n
+    // Feedback visual en el botón y en la tarjeta de revelación
     if (consultBtn) {
       consultBtn.disabled = true;
-      consultBtn.innerHTML = '<span>INVOCANDO...</span><span style="animation: spin 1s infinite linear;">Ô£ª</span>';
+      consultBtn.innerHTML = '<span>INVOCANDO...</span><span style="animation: spin 1s infinite linear;">✦</span>';
     }
 
     if (revealCard) {
       revealCard.style.display = 'block';
-      if (revealBadge) revealBadge.textContent = 'INVOCANDO OR├üCULO...';
-      if (revealKeyword) revealKeyword.textContent = '┬½SINTONIZANDO EL ESPEJO...┬╗';
+      if (revealBadge) revealBadge.textContent = 'INVOCANDO ORÁCULO...';
+      if (revealKeyword) revealKeyword.textContent = '«SINTONIZANDO EL ESPEJO...»';
       if (revealMeaning) {
         revealMeaning.textContent = customQuestion 
-          ? `El fuego sagrado est├í recibiendo tu intenci├│n: "${customQuestion}". Las part├¡culas de obsidiana se alinean con tu tonal...`
-          : 'El or├ículo tolteca de Tezcatlipoca abre el v├│rtice de visi├│n. Las part├¡culas de obsidiana transmutan tu intenci├│n...';
+          ? `El fuego sagrado está recibiendo tu intención: "${customQuestion}". Las partículas de obsidiana se alinean con tu tonal...`
+          : 'El oráculo tolteca de Tezcatlipoca abre el vórtice de visión. Las partículas de obsidiana transmutan tu intención...';
       }
-      if (revealGuide) revealGuide.textContent = 'Canalizando sabidur├¡a ancestral...';
+      if (revealGuide) revealGuide.textContent = 'Canalizando sabiduría ancestral...';
       if (revealElement) revealElement.textContent = 'Frecuencia: 432 Hz';
     }
 
@@ -534,7 +534,7 @@ export function initObsidianMirror() {
 
       if (revealCard) {
         if (revealBadge) revealBadge.textContent = 'RESPUESTA REVELADA';
-        if (revealKeyword) revealKeyword.textContent = `┬½${revelation.keyword}┬╗`;
+        if (revealKeyword) revealKeyword.textContent = `«${revelation.keyword}»`;
         if (revealMeaning) revealMeaning.textContent = revelation.meaning;
         if (revealGuide) revealGuide.textContent = `${revelation.guide}`;
         if (revealElement) revealElement.textContent = `Elemento: ${revelation.element}`;
@@ -569,7 +569,7 @@ export function initObsidianMirror() {
   }
 
   /* =========================================================================
-     4. LISTENERS DE INTERACCI├ôN (RAT├ôN / T├üCTIL)
+     4. LISTENERS DE INTERACCIÓN (RATÓN / TÁCTIL)
      ========================================================================= */
   function updatePointerPosition(clientX, clientY) {
     const rect = canvas.getBoundingClientRect();
@@ -614,13 +614,13 @@ export function initObsidianMirror() {
     mouse.isInside = false;
   });
 
-  // Soporte de Giroscopio Sagrado Exclusivo para M├│viles
+  // Soporte de Giroscopio Sagrado Exclusivo para Móviles
   const gyro = { gx: 0, gy: 0, active: false };
   if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', (e) => {
       if (e.gamma !== null && e.beta !== null) {
         gyro.active = true;
-        // gamma: inclinaci├│n eje X, beta: inclinaci├│n eje Y
+        // gamma: inclinación eje X, beta: inclinación eje Y
         gyro.gx = Math.max(-1.5, Math.min(1.5, e.gamma / 25));
         gyro.gy = Math.max(-1.5, Math.min(1.5, (e.beta - 40) / 25));
       }
@@ -635,7 +635,7 @@ export function initObsidianMirror() {
       mouse.isInside = true;
       triggerShockwave(mouse.x, mouse.y);
 
-      // Feedback h├íptico r├¡tmico m├│vil (Pulso Tolteca)
+      // Feedback háptico rítmico móvil (Pulso Tolteca)
       if (window.navigator && window.navigator.vibrate) {
         window.navigator.vibrate([35, 40, 20]);
         clearInterval(hapticPulseTimer);
@@ -706,7 +706,7 @@ export function initObsidianMirror() {
     ctx.arc(orbCenter, orbCenter, orbRadius - 2, 0, Math.PI * 2);
     ctx.clip();
 
-    // Resplandor c├│smico tenue en el centro
+    // Resplandor cósmico tenue en el centro
     const grad = ctx.createRadialGradient(orbCenter, orbCenter, 0, orbCenter, orbCenter, orbRadius);
     grad.addColorStop(0, 'rgba(45, 18, 25, 0.18)');
     grad.addColorStop(0.65, 'rgba(15, 8, 12, 0.45)');
@@ -731,7 +731,7 @@ export function initObsidianMirror() {
       }
     }
 
-    // Renderizado del cuerpo tipogr├ífico sagrado de alta definici├│n
+    // Renderizado del cuerpo tipográfico sagrado de alta definición
     if (oracleState === 'gathering') {
       textRevealAlpha = Math.min(1.0, textRevealAlpha + 0.05);
     } else {
@@ -746,7 +746,7 @@ export function initObsidianMirror() {
       const spacingPx = Math.max(3, Math.floor(activeFontSize * 0.1));
       if ('letterSpacing' in ctx) ctx.letterSpacing = `${spacingPx}px`;
 
-      // Capa A: Resplandor c├ílido exterior de fuego sagrado
+      // Capa A: Resplandor cálido exterior de fuego sagrado
       ctx.shadowColor = 'rgba(255, 183, 3, 0.85)';
       ctx.shadowBlur = 8;
       ctx.fillStyle = `rgba(255, 183, 3, ${textRevealAlpha * 0.65})`;
@@ -762,7 +762,7 @@ export function initObsidianMirror() {
         ctx.strokeText(line, orbCenter, activeStartY + (index * activeLineHeight));
       });
 
-      // Capa C: N├║cleo blanco marfil resplandeciente (m├íxima nitidez y legibilidad instant├ínea)
+      // Capa C: Núcleo blanco marfil resplandeciente (máxima nitidez y legibilidad instantánea)
       ctx.shadowBlur = 3;
       ctx.shadowColor = 'rgba(255, 215, 0, 0.8)';
       ctx.fillStyle = `rgba(255, 255, 255, ${textRevealAlpha * 0.98})`;
@@ -773,7 +773,7 @@ export function initObsidianMirror() {
       ctx.restore();
     }
 
-    // Actualizar part├¡culas
+    // Actualizar partículas
     particles.forEach(p => {
       p.update();
       p.draw();
