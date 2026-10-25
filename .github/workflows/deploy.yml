@@ -1,4 +1,4 @@
-name: Deploy CHANTICO to GitHub Pages
+name: Deploy ARTE XIBALBA to GitHub Pages
 
 on:
   push:
