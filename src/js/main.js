@@ -224,8 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 9. Reproducción continua de videos de fondo (Hero y Footer)
-  document.querySelectorAll('.hero-video-bg, .footer-video-bg').forEach(v => {
+  // 9. Reproducción continua de videos de fondo (Hero, Filosofía y Footer)
+  document.querySelectorAll('.hero-video-bg, .footer-video-bg, .filosofia-video-bg').forEach(v => {
     v.muted = true;
     v.defaultMuted = true;
     v.setAttribute('playsinline', '');

@@ -418,6 +418,58 @@ main, header, footer {
   pointer-events: none;
 }
 
+/* Video de fondo para sección Filosofía / Arte Xibalbá (abajo del Hero) */
+.filosofia-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.filosofia-video-bg::-webkit-media-controls,
+.filosofia-video-bg::-webkit-media-controls-panel,
+.filosofia-video-bg::-webkit-media-controls-play-button,
+.filosofia-video-bg::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.filosofia-video-overlay {
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 7, 6, 0.72) 0%,
+    rgba(9, 7, 6, 0.45) 30%,
+    rgba(9, 7, 6, 0.55) 70%,
+    rgba(9, 7, 6, 0.82) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+#filosofia {
+  position: relative;
+  overflow: hidden;
+}
+
+#filosofia > .container {
+  position: relative;
+  z-index: 2;
+}
+
 #particles-canvas {
   position: absolute;
   inset: 0;

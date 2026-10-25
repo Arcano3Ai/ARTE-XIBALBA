@@ -19,7 +19,7 @@ export class PakalBotWidget {
     this.launcherEl.id = 'pakal-bot-launcher';
     this.launcherEl.innerHTML = `
       <div class="numa-bot-launcher-icon">
-        <img src="./assets/images/arte_xibalba_logo.png" alt="Guía ARTE XIBALBÁ" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--color-gold);">
+        <img src="./assets/images/arte_xibalba_logo_circulo.png" alt="Guía ARTE XIBALBÁ" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--color-gold);">
       </div>
       <div class="numa-bot-launcher-text">
         <span class="numa-bot-launcher-title" style="color: var(--color-gold); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em;">GUÍA ARTE XIBALBÁ</span>
@@ -36,7 +36,7 @@ export class PakalBotWidget {
     this.windowEl.innerHTML = `
       <div class="numa-bot-header" style="background: rgba(18, 12, 10, 0.96); border-bottom: 1.5px solid var(--color-gold); padding: 1rem 1.25rem;">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <img src="./assets/images/arte_xibalba_logo.png" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-gold); box-shadow: 0 0 10px rgba(255,183,3,0.5);">
+          <img src="./assets/images/arte_xibalba_logo_circulo.png" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-gold); box-shadow: 0 0 10px rgba(255,183,3,0.5);">
           <div>
             <div style="font-family: var(--font-serif-display); font-size: 1.05rem; color: #FFFFFF; font-weight: 700; letter-spacing: 0.05em;">
               GUÍA ARTE XIBALBÁ
