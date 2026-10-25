@@ -1,9 +1,9 @@
 /**
- * Reproductor de Música de Fondo Oficial PAKAL TUN
- * Canción: "Pakal Tun.mp3"
+ * Reproductor de Música de Fondo Oficial ARTE XIBALBÁ
+ * Canción: "Arte Xibalbá.mp3"
  */
 export function initSoundPlayer() {
-  const audioSrc = './assets/audio/pakal_tun.mp3';
+  const audioSrc = './assets/audio/arte_xibalba.mp3';
   const audio = new Audio(audioSrc);
   audio.loop = true;
   audio.volume = 0.45;
@@ -19,7 +19,7 @@ export function initSoundPlayer() {
       bottom: 24px;
       left: 24px;
       z-index: 999;
-      display: none !important; /* Oculto por defecto a petición del usuario para no estorbar */
+      display: flex;
       align-items: center;
       gap: 10px;
       padding: 8px 16px 8px 10px;
@@ -35,7 +35,7 @@ export function initSoundPlayer() {
     `;
 
     playerEl.innerHTML = `
-      <button id="pakal-music-btn" aria-label="Reproducir música Pakal Tun" style="
+      <button id="pakal-music-btn" aria-label="Reproducir música oficial Arte Xibalbá" style="
         width: 38px;
         height: 38px;
         border-radius: 50%;
@@ -71,8 +71,33 @@ export function initSoundPlayer() {
   const icon = document.getElementById('pakal-music-icon');
   const status = document.getElementById('pakal-music-status');
   const eq = document.getElementById('pakal-equalizer');
+  const headerBtn = document.getElementById('header-music-btn');
+  const mobileBtn = document.getElementById('mobile-music-btn');
+  const headerIconPlaying = document.getElementById('header-music-icon-playing');
+  const headerIconMuted = document.getElementById('header-music-icon-muted');
+  const mobileIconPlaying = document.getElementById('mobile-music-icon-playing');
+  const mobileIconMuted = document.getElementById('mobile-music-icon-muted');
+
   let isPlaying = false;
   let eqInterval = null;
+
+  function syncExternalControls(playing) {
+    if (headerIconPlaying && headerIconMuted) {
+      headerIconPlaying.style.display = playing ? 'block' : 'none';
+      headerIconMuted.style.display = playing ? 'none' : 'block';
+    }
+    if (mobileIconPlaying && mobileIconMuted) {
+      mobileIconPlaying.style.display = playing ? 'block' : 'none';
+      mobileIconMuted.style.display = playing ? 'none' : 'block';
+    }
+    if (headerBtn) {
+      headerBtn.setAttribute('title', playing ? 'Pausar música Arte Xibalbá' : 'Reproducir música Arte Xibalbá');
+      headerBtn.style.color = playing ? 'var(--color-flame)' : 'var(--color-gold)';
+    }
+    if (mobileBtn) {
+      mobileBtn.style.color = playing ? 'var(--color-flame)' : 'var(--color-gold)';
+    }
+  }
 
   function updateVisuals(playing) {
     isPlaying = playing;
@@ -88,6 +113,8 @@ export function initSoundPlayer() {
       playerEl.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.75), 0 0 15px rgba(255, 183, 3, 0.3)';
       stopEq();
     }
+
+    syncExternalControls(playing);
   }
 
   function startEq() {
@@ -127,6 +154,20 @@ export function initSoundPlayer() {
     togglePlay();
   });
 
+  if (headerBtn) {
+    headerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      togglePlay();
+    });
+  }
+
+  if (mobileBtn) {
+    mobileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      togglePlay();
+    });
+  }
+
   // Intentar arranque automático tras el primer clic o toque en cualquier parte del sitio
   const startOnFirstGesture = () => {
     if (!isPlaying) {
@@ -138,6 +179,9 @@ export function initSoundPlayer() {
 
   document.addEventListener('click', startOnFirstGesture, { once: true });
   document.addEventListener('touchstart', startOnFirstGesture, { once: true });
+
+  // Estado inicial
+  syncExternalControls(false);
 
   // Exponer control global si otros elementos lo requieren
   window.pakalAudio = {

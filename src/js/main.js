@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   themeEngine.init();
   i18n.init();
 
-  // 0B. Música de Fondo Oficial: "Pakal Tun.mp3"
+  // 0B. Música de Fondo Oficial: "Arte Xibalbá.mp3"
   initSoundPlayer();
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else window.location.hash = '#tienda';
   });
 
-  // 8. Formulario de contacto -> Galería & Taller del Maestro Yax Balam
+  // 8. Formulario de contacto -> Galería & Taller del Maestro Edgar Olvera
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -215,12 +215,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('contact-email')?.value.trim();
       const message = document.getElementById('contact-message')?.value.trim();
 
-      const text = `Saludos Maestro Yax Balam, soy ${name} (${email}). Le escribo desde la Galería PAKAL TUN:\n\n${message}`;
+      const text = `Saludos Maestro Edgar Olvera, soy ${name} (${email}). Le escribo desde la Galería ARTE XIBALBÁ:\n\n${message}`;
       const copied = await sendToFacebook(text);
       contactForm.reset();
       alert(copied
-        ? 'Tu mensaje quedó copiado. Pégalo en el chat de la Galería PAKAL TUN del Maestro Yax Balam.'
-        : 'Escríbale al Maestro Yax Balam en la página de la Galería PAKAL TUN.');
+        ? 'Tu mensaje quedó copiado. Pégalo en el chat de Facebook del Maestro Edgar Olvera (ARTE XIBALBÁ).'
+        : 'Escríbale al Maestro Edgar Olvera en la página oficial de ARTE XIBALBÁ.');
     });
   }
 

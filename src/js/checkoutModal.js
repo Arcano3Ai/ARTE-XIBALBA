@@ -137,12 +137,12 @@ export class CheckoutModal {
 
     if (this.confirmationWaBtn) {
       const itemsList = order.items.map(i => `• ${i.quantity}x ${i.name} (${i.price * i.quantity} MXN)`).join('\n');
-      const msg = `Saludos Maestro Yax Balam, quiero confirmar mi pedido ${order.id} en PAKAL TUN por ${order.total.toLocaleString('es-MX')} MXN.\n\nPiezas:\n${itemsList}\n\nCliente: ${name}\nTel: ${phone}\nDirección: ${address}, ${city}, ${state}.`;
-      this.confirmationWaBtn.href = 'https://www.facebook.com/sergio.perez.pakaltun/photos';
+      const msg = `Saludos Maestro Edgar Olvera, quiero confirmar mi pedido ${order.id} en ARTE XIBALBÁ por ${order.total.toLocaleString('es-MX')} MXN.\n\nPiezas:\n${itemsList}\n\nCliente: ${name}\nTel: ${phone}\nDirección: ${address}, ${city}, ${state}.`;
+      this.confirmationWaBtn.href = 'https://www.facebook.com/edgar.olvera.706671';
       this.confirmationWaBtn.onclick = (ev) => {
         ev.preventDefault();
         sendToFacebook(msg).then(copied => {
-          if (copied) alert('Tu pedido quedó copiado. Pégalo en el chat de la Galería PAKAL TUN del Maestro Yax Balam.');
+          if (copied) alert('Tu pedido quedó copiado. Pégalo en el chat de Facebook del Maestro Edgar Olvera (ARTE XIBALBÁ).');
         });
       };
     }
