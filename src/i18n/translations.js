@@ -102,7 +102,7 @@ export const TRANSLATIONS = {
     // Carrito
     cart_title: 'Tu Selección',
     cart_free_shipping_notice: 'Envío asegurado en todas tus piezas',
-    cart_coupon_ph: 'Código de descuento (ej. XIBALBA15)',
+    cart_coupon_ph: 'Código de descuento (ej. ARTEXIBALBA)',
     cart_coupon_btn: 'APLICAR',
     cart_subtotal: 'Subtotal',
     cart_discount: 'Descuento',
@@ -204,7 +204,7 @@ export const TRANSLATIONS = {
 
     cart_title: 'Your Selection',
     cart_free_shipping_notice: 'Insured shipping on all your pieces',
-    cart_coupon_ph: 'Discount code (e.g. XIBALBA15)',
+    cart_coupon_ph: 'Discount code (e.g. ARTEXIBALBA)',
     cart_coupon_btn: 'APPLY',
     cart_subtotal: 'Subtotal',
     cart_discount: 'Discount',

@@ -141,7 +141,7 @@ export function processBotQuery(rawInput) {
     norm.includes('cuanto cuesta')
   ) {
     return {
-      text: `🎟️ **Precios, Envíos & Códigos Especiales**\n\n• **Cupón Activo:** Usa el código **XIBALBA15** al finalizar tu compra para obtener un **15% de descuento** en tu pedido.\n• **Rango de Precios:** Desde $750 MXN (pulseras talladas de flor de jade) hasta $3,800 MXN (pectorales monumentales con estuche de galería).\n• **Envíos:** Envíos asegurados y protegidos a todo México con paquetería express. Empaque especial contra impactos.`,
+      text: `🎟️ **Precios, Envíos & Códigos Especiales**\n\n• **Cupón Activo:** Usa el código **ARTEXIBALBA** al finalizar tu compra para obtener un **15% de descuento** en tu pedido.\n• **Rango de Precios:** Desde $750 MXN (pulseras talladas de flor de jade) hasta $3,800 MXN (pectorales monumentales con estuche de galería).\n• **Envíos:** Envíos asegurados y protegidos a todo México con paquetería express. Empaque especial contra impactos.`,
       products: [PRODUCTS[5], PRODUCTS[0]],
       quickReplies: [
         'Aplicar cupón en carrito',

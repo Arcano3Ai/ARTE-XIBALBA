@@ -102,12 +102,13 @@ class Store {
   }
 
   applyCoupon(code) {
-    const normalized = (code || '').trim().toUpperCase();
-    if (normalized === 'XIBALBA15' || normalized === 'ARTE15' || normalized === 'JADE15' || normalized === 'PAKALTUN15') {
+    const normalized = (code || '').trim().toUpperCase().replace(/\s+/g, '');
+    const validCodes = ['ARTEXIBALBA', 'XIBALBA', 'ARTEXIBALBA15', 'EDGAROLVERA', 'XIBALBA15', 'ARTE15', 'JADE15'];
+    if (validCodes.includes(normalized)) {
       this.coupon = normalized;
       this.discountPercent = 0.15; // 15% OFF
       this.notify();
-      return { success: true, message: '¡Cupón aplicado! 15% de descuento en tu pieza de colección ARTE XIBALBÁ.' };
+      return { success: true, message: '¡Cupón aplicado! 15% de descuento con el código ARTEXIBALBA en tu pieza de ARTE XIBALBÁ.' };
     }
     return { success: false, message: 'El cupón ingresado no es válido o ha expirado.' };
   }
