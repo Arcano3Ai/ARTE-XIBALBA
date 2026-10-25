@@ -19,11 +19,11 @@ export class PakalBotWidget {
     this.launcherEl.id = 'pakal-bot-launcher';
     this.launcherEl.innerHTML = `
       <div class="numa-bot-launcher-icon">
-        <img src="./assets/images/pakal_tun_collar_jade.jpg" alt="Guía PAKAL TUN" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--color-gold);">
+        <img src="./assets/images/arte_xibalba_logo.png" alt="Guía ARTE XIBALBÁ" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--color-gold);">
       </div>
       <div class="numa-bot-launcher-text">
-        <span class="numa-bot-launcher-title" style="color: var(--color-gold); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em;">GUÍA PAKAL TUN</span>
-        <span class="numa-bot-launcher-sub" style="font-size: 0.72rem; color: var(--color-text-muted);">Joyería de Sergio Pérez</span>
+        <span class="numa-bot-launcher-title" style="color: var(--color-gold); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em;">GUÍA ARTE XIBALBÁ</span>
+        <span class="numa-bot-launcher-sub" style="font-size: 0.72rem; color: var(--color-text-muted);">Centro Histórico CDMX</span>
       </div>
       <span class="numa-bot-unread-dot" style="width: 8px; height: 8px; background: var(--color-gold); border-radius: 50%; box-shadow: 0 0 8px var(--color-gold);"></span>
     `;
@@ -34,16 +34,16 @@ export class PakalBotWidget {
     this.windowEl.id = 'pakal-bot-window';
     this.windowEl.style.zIndex = '10050';
     this.windowEl.innerHTML = `
-      <div class="numa-bot-header" style="background: rgba(18, 53, 36, 0.95); border-bottom: 1.5px solid var(--color-gold); padding: 1rem 1.25rem;">
+      <div class="numa-bot-header" style="background: rgba(18, 12, 10, 0.96); border-bottom: 1.5px solid var(--color-gold); padding: 1rem 1.25rem;">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <img src="./assets/images/pakal_tun_collar_jade.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-gold); box-shadow: 0 0 10px rgba(255,183,3,0.5);">
+          <img src="./assets/images/arte_xibalba_logo.png" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-gold); box-shadow: 0 0 10px rgba(255,183,3,0.5);">
           <div>
             <div style="font-family: var(--font-serif-display); font-size: 1.05rem; color: #FFFFFF; font-weight: 700; letter-spacing: 0.05em;">
-              GUÍA PAKAL TUN
+              GUÍA ARTE XIBALBÁ
             </div>
             <div style="font-size: 0.74rem; color: var(--color-gold-light); display: flex; align-items: center; gap: 0.35rem;">
               <span style="width: 6px; height: 6px; border-radius: 50%; background: #4ADE80; display: inline-block;"></span>
-              Joyería Prehispánica · Sergio Pérez
+              Alta Joyería Prehispánica · Bolivar 45, CDMX
             </div>
           </div>
         </div>

@@ -1,16 +1,20 @@
-// Identidad y canales de contacto oficiales de PAKAL TUN
+// Identidad y canales de contacto oficiales de ARTE XIBALBÁ
 export const BRAND = {
-  name: 'PAKAL TUN',
-  artisan: 'Maestro Yax Balam',
-  title: 'Maestro Lapidario & Escultor Prehispánico',
-  gallery: 'Artesanal Studio y Mercado · Galería & Taller del Maestro Yax Balam · Zona Oculta Maya',
-  facebookUrl: 'https://www.facebook.com/sergio.perez.pakaltun/photos',
-  address: 'Zona Oculta Maya · Santuario Lapidario'
+  name: 'ARTE XIBALBÁ',
+  tagline: 'Alta Joyería & Escultura Lapidaria Prehispánica',
+  artisan: 'Maestro Edgar Olvera',
+  title: 'Maestro Escultor Lapidario & Artista Prehispánico',
+  gallery: 'Galería & Boutique · Bolivar 45, Bazar Locales 12 y 13, Centro Histórico, CDMX',
+  facebookUrl: 'https://www.facebook.com/edgar.olvera.706671',
+  whatsappNumber: '525657388563',
+  whatsappUrl: 'https://wa.me/525657388563',
+  instagramUrl: 'https://www.instagram.com/arte_xibalba',
+  tiktokUrl: 'https://www.tiktok.com/@arte_xibalba_',
+  address: 'Bolivar 45, Bazar Locales 12 y 13, Centro Histórico, CDMX'
 };
 
 /**
- * Copia el mensaje al portapapeles (si el navegador lo permite) y abre el
- * perfil de Facebook de Sergio Pérez para que el cliente lo pegue en el chat.
+ * Copia el mensaje al portapapeles y abre los canales oficiales de contacto.
  * Devuelve true si el texto quedó copiado.
  */
 export async function sendToFacebook(text) {
@@ -24,3 +28,4 @@ export async function sendToFacebook(text) {
   window.open(BRAND.facebookUrl, '_blank', 'noopener');
   return copied;
 }
+

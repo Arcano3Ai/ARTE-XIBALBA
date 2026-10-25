@@ -54,7 +54,7 @@ export function initSoundPlayer() {
         <span id="pakal-music-icon">▶</span>
       </button>
       <div style="display: flex; flex-direction: column;">
-        <span style="font-size: 0.78rem; font-weight: 700; color: #FFFFFF; font-family: var(--font-serif-display); letter-spacing: 0.05em;">PAKAL TUN</span>
+        <span style="font-size: 0.78rem; font-weight: 700; color: #FFFFFF; font-family: var(--font-serif-display); letter-spacing: 0.05em;">ARTE XIBALBÁ</span>
         <span id="pakal-music-status" style="font-size: 0.68rem; color: var(--color-gold-light);">Música de fondo · Pausada</span>
       </div>
       <div id="pakal-equalizer" style="display: flex; gap: 3px; align-items: flex-end; height: 16px; margin-left: 6px;">

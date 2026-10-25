@@ -1,159 +1,261 @@
 export const PRODUCTS = [
-  // --- JOYERÍA PREHISPÁNICA DE AUTOR & COLLARES PAKAL TUN ---
+  // --- ALTA JOYERÍA PREHISPÁNICA & ESCULTURA ARTE XIBALBÁ ---
   {
-    id: 'collar-pakal-jade',
-    name: 'Collar Máscara de Pakal en Jade Auténtico (Colección 2027)',
+    id: 'collar-xibalba-deidad-inframundo',
+    name: 'Pectoral Sagrado Deidad de Xibalbá en Sodalita & Pigmento Rojo',
+    category: 'collares',
+    categoryLabel: 'Collares de Autor',
+    price: 3600,
+    originalPrice: 4200,
+    rating: 5.0,
+    reviewsCount: 52,
+    isFeatured: true,
+    badge: 'Pieza Insignia',
+    image: './assets/images/xibalba_deidad_inframundo.jpg',
+    tagline: 'Efigie monumental del señor del inframundo tallada a mano con cuentas masivas de sodalita mineral.',
+    description: 'Obra cumbre de la colección Arte Xibalbá. Representa a la deidad sagrada del inframundo maya tallada magistralmente en sodalita azul con detalles en pigmento ritual rojo terroso, custodiada por cuentas esféricas y cilíndricas de gran calibre. Pieza ceremonial única que transmite la fuerza espiritual y el misterio de los nueve niveles del cosmos maya.',
+    aroma: {
+      salida: 'Sodalita Natural de Alta Densidad',
+      corazon: 'Pigmento Ritual Rojo Ancestral',
+      fondo: 'Cuentas Masivas Pulidas a Mano'
+    },
+    experience: 'Pieza de coleccionismo y gala ceremonial prehispánica con presencia imponente.',
+    variants: [
+      { id: 'cxd-estandar', label: 'Pectoral Completo Deidad Xibalbá con Cuentas', price: 3600 }
+    ],
+    inStock: true,
+    stockQuantity: 3
+  },
+  {
+    id: 'collar-xibalba-calavera-obsidiana',
+    name: 'Collar Calavera Mayor en Obsidiana Negra Pulida',
     category: 'collares',
     categoryLabel: 'Collares de Autor',
     price: 3200,
     originalPrice: 3800,
     rating: 5.0,
-    reviewsCount: 47,
+    reviewsCount: 46,
     isFeatured: true,
-    badge: 'Pieza Insignia',
-    image: './assets/images/pakal_tun_collar_jade.jpg',
-    tagline: 'Pieza de autor en jadeíta verde con calaveras talladas y cuentas ceremoniales.',
-    description: 'Collar monumental de alta artesanía prehispánica creado por el maestro Yax Balam. Presenta un pectoral central con la icónica máscara funeraria de Pakal finamente tallada en jadeíta verde auténtica, escoltada por cuentas de obsidiana pulida, turquesa natural y calaveras de hueso esculpidas a mano. Una pieza de colección que encarna la soberanía y el cosmos maya.',
+    badge: 'Edición Mística',
+    image: './assets/images/xibalba_calavera_obsidiana.jpg',
+    tagline: 'Calavera esculpida en obsidiana volcánica espejada con sartal de esferas minerales de alta pureza.',
+    description: 'Escultura lapidaria en vidrio volcánico natural que encarna el espejo negro de Tezcatlipoca y los portales de Xibalbá. Cada rasgo anatómico craneal está tallado y pulido al más alto nivel, engarzado con esferas de obsidiana negra profunda.',
     aroma: {
-      salida: 'Jadeíta Genuina de Guatemala / México',
-      corazon: 'Turquesa Natural & Obsidiana Negra',
-      fondo: 'Calaveras Talladas a Mano'
+      salida: 'Obsidiana Negra Volcánica Genuina',
+      corazon: 'Pulido Espejo Lapidario',
+      fondo: 'Cuentas Esféricas Calibradas'
     },
-    experience: 'Joyería de autor única para ocasiones solemnes, colección de arte o porte ceremonial.',
+    experience: 'Escudo energético de transmutación y porte solemne de alta distinción.',
     variants: [
-      { id: 'cpj-estandar', label: 'Collar Completo con Pectoral Pakal Jade', price: 3200 }
-    ],
-    inStock: true,
-    stockQuantity: 5
-  },
-  {
-    id: 'collar-jaguar-ancestral',
-    name: 'Collar Ceremonial Cabeza de Jaguar (Piedra Tallada)',
-    category: 'collares',
-    categoryLabel: 'Collares de Autor',
-    price: 2800,
-    originalPrice: 3400,
-    rating: 5.0,
-    reviewsCount: 39,
-    isFeatured: true,
-    badge: 'Edición Limitada',
-    image: './assets/images/pakal_tun_galeria_vitrina.jpg',
-    tagline: 'Efigie escultórica de Ocelotl tallada con cuentas de ojo de tigre y jade.',
-    description: 'Inspirado en la fuerza y el sigilo del jaguar nocturno mesoamericano. Dije central escultórico con fauces abiertas y detalles en alto relieve, engarzado en un cordón ceremonial con cuentas minerales de ojo de tigre, obsidiana dorada y piedra volcánica.',
-    aroma: {
-      salida: 'Escultura en Piedra Mineral Natural',
-      corazon: 'Ojo de Tigre & Obsidiana Dorada',
-      fondo: 'Acabado Artesanal de Autor'
-    },
-    experience: 'Amuleto de protección, fuerza y visión nocturna del linaje tolteca y maya.',
-    variants: [
-      { id: 'cja-estandar', label: 'Collar Cabeza de Jaguar con Cuentas', price: 2800 }
-    ],
-    inStock: true,
-    stockQuantity: 7
-  },
-  {
-    id: 'collar-mascara-lapislazuli',
-    name: 'Pectoral Máscara Ceremonial en Lapislázuli & Cuentas Naturales',
-    category: 'mascaras',
-    categoryLabel: 'Máscaras & Pectorales',
-    price: 3100,
-    originalPrice: 3600,
-    rating: 4.9,
-    reviewsCount: 31,
-    isFeatured: true,
-    badge: 'Galería de Autor',
-    image: './assets/images/pakal_tun_galeria_vitrina.jpg',
-    tagline: 'Rostro ceremonial tallado en piedra azul profunda con cuentas de concha y hueso.',
-    description: 'Pieza exclusiva de la Galería de Autor PAKAL TUN. Máscara prehispánica esculpida en lapislázuli que evoca el manto celeste y el agua primordial, enmarcada con cuentas blancas de concha nácar y hueso natural.',
-    aroma: {
-      salida: 'Lapislázuli Mineral Azul Ultramar',
-      corazon: 'Cuentas de Concha Nácar & Hueso',
-      fondo: 'Montaje Resistente de Alta Durabilidad'
-    },
-    experience: 'Elegancia sobria y conexión espiritual con las deidades celestes mesoamericanas.',
-    variants: [
-      { id: 'cml-estandar', label: 'Pectoral Lapislázuli con Cordón Ritual', price: 3100 }
+      { id: 'cxco-estandar', label: 'Collar Calavera Mayor con Sartal de Obsidiana', price: 3200 }
     ],
     inStock: true,
     stockQuantity: 4
   },
   {
-    id: 'collar-rostro-jade-obscuro',
-    name: 'Collar Rostro Sagrado en Jade Verde Oscuro & Turquesa',
+    id: 'collar-xibalba-tecolote-obsidiana',
+    name: 'Collar Tótem Tecolote Mensajero de Xibalbá en Obsidiana',
     category: 'collares',
     categoryLabel: 'Collares de Autor',
-    price: 2950,
-    originalPrice: 3500,
+    price: 2900,
+    originalPrice: 3400,
     rating: 5.0,
-    reviewsCount: 28,
+    reviewsCount: 38,
     isFeatured: true,
-    badge: 'Más Deseado',
-    image: './assets/images/pakal_tun_galeria_vitrina.jpg',
-    tagline: 'Máscara pulida en jadeíta oscura con esferas de turquesa y piedra volcánica.',
-    description: 'Contraste sublime entre el verde bosque del jade pulido a mano y la textura rústica de la roca volcánica y turquesa. Simboliza la dualidad entre la tierra fértil y el mundo subterráneo de la cosmovisión prehispánica.',
+    badge: 'Tótem Sagrado',
+    image: './assets/images/xibalba_tecolote_obsidiana.jpg',
+    tagline: 'El guardián y mensajero nocturno tallado en piedra de obsidiana con cuentas esféricas y fusiformes.',
+    description: 'En el Popol Vuh, los búhos y tecolotes son los sabios mensajeros de los señores de Xibalbá. Esta escultura en miniatura captura la mirada penetrante del ave nocturna con textura plumada en bajorrelieve y cuentas alternadas de obsidiana.',
     aroma: {
-      salida: 'Jadeíta Verde Bosque Pulida a Espejo',
-      corazon: 'Turquesa Natural en Esferas',
-      fondo: 'Lava Volcánica Porosa & Obsidiana'
+      salida: 'Obsidiana Negra Natural Esculpida',
+      corazon: 'Detalles Anatómicos en Relieve',
+      fondo: 'Cuentas Pulidas de Alta Resistencia'
     },
-    experience: 'Equilibrio de energías terrestres y distinción artesanal incomparable.',
+    experience: 'Símbolo de sabiduría ancestral, visión oculta y protección en la oscuridad.',
     variants: [
-      { id: 'crj-estandar', label: 'Collar Rostro Jade Oscuro Completo', price: 2950 }
+      { id: 'cxto-estandar', label: 'Collar Tótem Tecolote Completo', price: 2900 }
+    ],
+    inStock: true,
+    stockQuantity: 5
+  },
+  {
+    id: 'collar-xibalba-mascara-dual',
+    name: 'Pectoral Máscara Dual Inframundo & Glifos Turquesa',
+    category: 'mascaras',
+    categoryLabel: 'Máscaras & Pectorales',
+    price: 3300,
+    originalPrice: 3900,
+    rating: 4.9,
+    reviewsCount: 41,
+    isFeatured: true,
+    badge: 'Dualidad Sagrada',
+    image: './assets/images/xibalba_mascara_dual_turquesa.jpg',
+    tagline: 'Máscara con rostro bipartito: serenidad del plano terrenal y glifos celestes de turquesa sagrada.',
+    description: 'Representación sublime de la dualidad mesoamericana: vida y muerte, luz y sombra. La mitad del rostro muestra sobriedad en basalto negro y la otra mitad revela glifos y espirales tallados en turquesa brillante con sartal de jaspe y piedra volcánica.',
+    aroma: {
+      salida: 'Piedra Mineral Basáltica & Turquesa',
+      corazon: 'Glifos Ancestrales en Alto Relieve',
+      fondo: 'Cuentas de Jaspe y Roca Volcánica'
+    },
+    experience: 'Conexión con los misterios del cosmos y la integración armónica de los opuestos.',
+    variants: [
+      { id: 'cxmd-estandar', label: 'Pectoral Máscara Dual con Collar Ritual', price: 3300 }
+    ],
+    inStock: true,
+    stockQuantity: 3
+  },
+  {
+    id: 'brazalete-xibalba-jade-imperial',
+    name: 'Brazalete Sagrado en Jade Imperial Translúcido con Glifos',
+    category: 'brazaletes',
+    categoryLabel: 'Brazaletes & Anillos',
+    price: 1850,
+    originalPrice: 2200,
+    rating: 5.0,
+    reviewsCount: 63,
+    isFeatured: true,
+    badge: 'Jade Genuino Verificado',
+    image: './assets/images/xibalba_brazalete_jade_imperial.jpg',
+    tagline: 'Pieza de jadeíta verde imperial con talla en relieve de olas mayas y translucidez gemológica comprobada.',
+    description: 'Brazalete de colección elaborado con jadeíta imperial auténtica de pureza suprema. Su placa central curva presenta espirales y olas ceremoniales de agua primordial, acompañada por cuentas esféricas de jade natural y nudo corredizo de alta durabilidad.',
+    aroma: {
+      salida: 'Jadeíta Verde Imperial 100% Genuina',
+      corazon: 'Translucidez Esmeralda a la Luz',
+      fondo: 'Talla en Relieve Glífico Maya'
+    },
+    experience: 'La joya más codiciada por los gobernantes mayas: nobleza, salud, eternidad y abundancia.',
+    variants: [
+      { id: 'bji-estandar', label: 'Brazalete Jade Imperial con Nudo Ajustable', price: 1850 }
+    ],
+    inStock: true,
+    stockQuantity: 8
+  },
+  {
+    id: 'brazalete-xibalba-obsidiana-pura',
+    name: 'Brazalete Ceremonial de Esferas de Obsidiana Negra & Cuenta Dintel',
+    category: 'brazaletes',
+    categoryLabel: 'Brazaletes & Anillos',
+    price: 950,
+    originalPrice: 1250,
+    rating: 5.0,
+    reviewsCount: 79,
+    isFeatured: true,
+    badge: 'Amuleto Diario',
+    image: './assets/images/xibalba_brazalete_obsidiana_pura.jpg',
+    tagline: 'Esferas pulidas de obsidiana negra de brillo vidrioso con cuenta central cilíndrica grabada.',
+    description: 'Brazalete de diseño sobrio y poderoso para uso cotidiano o ritual. Cuentas seleccionadas de obsidiana volcánica ensartadas con tejido macramé de alta resistencia que resiste el agua y el uso rudo.',
+    aroma: {
+      salida: 'Obsidiana Negra Volcánica Mexicana',
+      corazon: 'Pulido Liso Suave al Tacto',
+      fondo: 'Cierre Corredizo Reforzado'
+    },
+    experience: 'Protección energética continua y elegancia atemporal de la piedra volcánica prehispánica.',
+    variants: [
+      { id: 'bop-estandar', label: 'Brazalete de Obsidiana Negra Ajustable', price: 950 }
+    ],
+    inStock: true,
+    stockQuantity: 15
+  },
+  {
+    id: 'collar-xibalba-cuentas-jade-monumental',
+    name: 'Collar Monumental de Cuentas de Jade Verde & Medallón Sagrado',
+    category: 'collares',
+    categoryLabel: 'Collares de Autor',
+    price: 3800,
+    originalPrice: 4500,
+    rating: 5.0,
+    reviewsCount: 35,
+    isFeatured: true,
+    badge: 'Colección Oficial Boutique',
+    image: './assets/images/xibalba_bolsa_galeria.jpg',
+    tagline: 'Sartal de jadeíta auténtica de colección con medallón circular disco de jade verde.',
+    description: 'Impresionante collar ceremonial con cuentas facetadas y tubulares en jadeíta verde salvia, rematado por un disco sagrado de jade bicoloreado. Incluye empaque oficial de Arte Xibalbá garantizando su procedencia del Centro Histórico de la CDMX.',
+    aroma: {
+      salida: 'Jadeíta Verde Ancestral de Primera Calidad',
+      corazon: 'Medallón Disco Central Pulido',
+      fondo: 'Incluye Empaque y Bolsa Oficial Arte Xibalbá'
+    },
+    experience: 'Elegancia museográfica inspirada en los ajuares funerarios de la élite maya.',
+    variants: [
+      { id: 'cmj-estandar', label: 'Collar Completo con Medallón y Empaque de Galería', price: 3800 }
+    ],
+    inStock: true,
+    stockQuantity: 2
+  },
+  {
+    id: 'collar-xibalba-triada-calaveras',
+    name: 'Collar Tríada de Calaveras en Hematita & Obsidiana',
+    category: 'collares',
+    categoryLabel: 'Collares de Autor',
+    price: 2850,
+    originalPrice: 3300,
+    rating: 4.9,
+    reviewsCount: 32,
+    isFeatured: true,
+    badge: 'Talla Fina',
+    image: './assets/images/xibalba_collar_calaveras_hematita.jpg',
+    tagline: 'Tres calaveras talladas en piedra mineral con cuentas de hematita espejada y obsidiana.',
+    description: 'Composición ritual que alude a los ciclos de renacimiento y trascendencia del alma. Las tres calaveras esculpidas en piedra contrastan con el lustre metálico de las cuentas de hematita y el abalorio alargado de obsidiana.',
+    aroma: {
+      salida: 'Mineral de Hematita Metálica & Obsidiana',
+      corazon: 'Talla Anatómica Tridimensional de Calaveras',
+      fondo: 'Lustre Metálico Pulido a Espejo'
+    },
+    experience: 'Estilo distintivo con gran fuerza visual y simbolismo ancestral de Xibalbá.',
+    variants: [
+      { id: 'ctc-estandar', label: 'Collar Tríada de Calaveras con Hematita', price: 2850 }
     ],
     inStock: true,
     stockQuantity: 6
   },
   {
-    id: 'pulseras-anillos-prehispanicos',
-    name: 'Colección de Brazaletes y Anillos Prehispánicos en Jade',
+    id: 'pulsera-xibalba-flor-jade',
+    name: 'Pulsera Flor Sagrada en Jadeíta Verde de Arte Xibalbá',
     category: 'brazaletes',
     categoryLabel: 'Brazaletes & Anillos',
-    price: 650,
-    originalPrice: 850,
-    rating: 4.9,
-    reviewsCount: 54,
+    price: 750,
+    originalPrice: 950,
+    rating: 5.0,
+    reviewsCount: 58,
     isFeatured: true,
-    badge: 'Artesanía Fina',
-    image: './assets/images/pakal_tun_exhibidor_artesanal.png',
-    tagline: 'Piezas individuales y juegos en jade, turquesa, coral, ámbar y plata.',
-    description: 'Selección de pulseras en sartales de piedras semipreciosas seleccionadas a mano y anillos tallados en jade, serpentina y plata. Disponibles en el taller sagrado de la Zona Oculta Maya y con envío seguro a todo el país.',
+    badge: 'Edición Delicada',
+    image: './assets/images/xibalba_pulsera_flor_jade.jpg',
+    tagline: 'Flor esculpida en jade auténtico verde agua con sartal de cuentas calibradas y ajuste macramé.',
+    description: 'Símbolo del florecimiento espiritual y la pureza del jade. Escultura sutil de cuatro pétalos tallada en bloque único de jadeíta, engarzada con cuentas esféricas verdes y cordón esmeralda trenzado a mano.',
     aroma: {
-      salida: 'Jade Auténtico, Turquesa & Ámbar',
-      corazon: 'Talla Lapidaria a Medida',
-      fondo: 'Minerales 100% Genuinos'
+      salida: 'Jadeíta Verde Agua Esculpida',
+      corazon: 'Flor Simbólica de Cuatro Rumbos',
+      fondo: 'Cordón Macramé Ajustable'
     },
-    experience: 'Porte diario con la calidez, protección y elegancia de los minerales sagrados.',
+    experience: 'Toque de distinción sutil, ideal para uso diario y regalo de valor imperecedero.',
     variants: [
-      { id: 'pa-pulsera', label: 'Brazalete de Jade / Turquesa', price: 650 },
-      { id: 'pa-anillo', label: 'Anillo Tallado en Mineral', price: 550 },
-      { id: 'pa-set', label: 'Set Dúo (Brazalete + Anillo)', price: 1100 }
+      { id: 'pfj-estandar', label: 'Pulsera Flor de Jade con Nudo Ajustable', price: 750 }
     ],
     inStock: true,
-    stockQuantity: 25
+    stockQuantity: 12
   },
   {
-    id: 'pectoral-solar-mexica',
-    name: 'Pectoral Monumental Guerrero Prehispánico en Mosaico',
-    category: 'mascaras',
-    categoryLabel: 'Máscaras & Pectorales',
-    price: 3400,
-    originalPrice: 4200,
+    id: 'collar-xibalba-jaguar-sodalita',
+    name: 'Pectoral Ceremonial Cabeza de Jaguar en Sodalita Azul',
+    category: 'collares',
+    categoryLabel: 'Collares de Autor',
+    price: 3450,
+    originalPrice: 4100,
     rating: 5.0,
-    reviewsCount: 22,
+    reviewsCount: 29,
     isFeatured: true,
-    badge: 'Pieza de Colección',
-    image: './assets/images/pakal_tun_exhibidor_artesanal.png',
-    tagline: 'Gran medallón ceremonial tallado con iconografía ancestral y cuentas de serpentina.',
-    description: 'Magnífico pectoral inspirado en los discos sagrados y guerreros de la tradición mexica y tolteca. Una obra lapidaria de autor firmada por el maestro Yax Balam que rinde homenaje a los grandes maestros talladores del México antiguo.',
+    badge: 'Guardián Felino',
+    image: './assets/images/xibalba_jaguar_sodalita.jpg',
+    tagline: 'Fauces de jaguar esculpidas en sodalita azul con cuentas tubulares y esféricas ceremoniales.',
+    description: 'El jaguar (Balam) es el custodio supremo de la noche y el inframundo maya. Este imponente pectoral captura las fauces y orejas del felino en bajorrelieve sobre sodalita azul profundo con vetas blancas naturales que simulan el cielo estrellado.',
     aroma: {
-      salida: 'Serpentina & Mosaico Lapidario',
-      corazon: 'Iconografía Tradicional Ancestral',
-      fondo: 'Pieza de Autor por el Maestro Yax Balam'
+      salida: 'Sodalita Azul con Vetas Minerales Naturales',
+      corazon: 'Escultura de Ocelotl / Jaguar en Alto Relieve',
+      fondo: 'Cuentas Tubulares y Esféricas Lapidarias'
     },
-    experience: 'Centro de atención para coleccionistas, exposiciones y ceremonias tradicionales.',
+    experience: 'Poder, autoridad, sigilo y linaje chamánico de las tierras mayas.',
     variants: [
-      { id: 'psm-estandar', label: 'Pectoral Monumental con Cordón', price: 3400 }
+      { id: 'cjs-estandar', label: 'Collar Jaguar en Sodalita Completo', price: 3450 }
     ],
     inStock: true,
     stockQuantity: 3
@@ -161,9 +263,10 @@ export const PRODUCTS = [
 ];
 
 export const CATEGORIES = [
-  { id: 'all', label: 'Todas las Piezas', icon: '✦' },
-  { id: 'collares', label: 'Collares de Autor', icon: '📿' },
-  { id: 'mascaras', label: 'Máscaras & Pectorales', icon: '🎭' },
-  { id: 'brazaletes', label: 'Brazaletes & Anillos', icon: '💍' },
-  { id: 'minerales', label: 'Jade & Minerales', icon: '💎' }
+  { id: 'all', label: 'Todas las Obras', icon: '✦' },
+  { id: 'collares', label: 'Collares & Pectorales', icon: '📿' },
+  { id: 'mascaras', label: 'Máscaras Sagradas', icon: '🎭' },
+  { id: 'brazaletes', label: 'Brazaletes & Pulseras', icon: '💍' },
+  { id: 'minerales', label: 'Jade & Obsidiana', icon: '💎' }
 ];
+

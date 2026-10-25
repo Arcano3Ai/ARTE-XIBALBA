@@ -103,11 +103,11 @@ class Store {
 
   applyCoupon(code) {
     const normalized = (code || '').trim().toUpperCase();
-    if (normalized === 'PAKALTUN15' || normalized === 'JADE15') {
+    if (normalized === 'XIBALBA15' || normalized === 'ARTE15' || normalized === 'JADE15' || normalized === 'PAKALTUN15') {
       this.coupon = normalized;
       this.discountPercent = 0.15; // 15% OFF
       this.notify();
-      return { success: true, message: '¡Cupón aplicado! 15% de descuento en tu pieza de autor PAKAL TUN.' };
+      return { success: true, message: '¡Cupón aplicado! 15% de descuento en tu pieza de colección ARTE XIBALBÁ.' };
     }
     return { success: false, message: 'El cupón ingresado no es válido o ha expirado.' };
   }

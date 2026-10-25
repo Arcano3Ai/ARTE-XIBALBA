@@ -12,19 +12,17 @@ function normalizeText(text) {
 }
 
 /**
- * Motor de Inteligencia y Conversación de la Guía PAKAL TUN
- * Especializado en Joyería Prehispánica de Autor de Sergio Pérez.
+ * Motor de Inteligencia y Conversación de la Guía ARTE XIBALBÁ
+ * Especializado en Alta Joyería & Escultura Lapidaria Prehispánica.
  */
 export function processBotQuery(rawInput) {
   const norm = normalizeText(rawInput);
 
-  // 1. CREADOR & MAESTRO ARTESANO
+  // 1. CREADORES & MAESTROS ARTESANOS
   if (
+    norm.includes('edgar') ||
+    norm.includes('olvera') ||
     norm.includes('creador') ||
-    norm.includes('sergio') ||
-    norm.includes('perez') ||
-    norm.includes('yax balam') ||
-    norm.includes('villarreal') ||
     norm.includes('autor') ||
     norm.includes('artesano') ||
     norm.includes('quien hace') ||
@@ -32,39 +30,39 @@ export function processBotQuery(rawInput) {
     norm.includes('quien lo hace')
   ) {
     return {
-      text: `👑 **Maestro Yax Balam · Escultor Prehispánico**\n\n• **Maestro Artesano Lapidario:** Cada pectoral, máscara y collar ceremonial es tallado a mano por el **maestro Yax Balam** en su taller sagrado en la **Zona Oculta Maya**.\n\nEl maestro Yax Balam selecciona personalmente los bloques de jadeíta genuina (de Guatemala y México), turquesa y obsidiana volcánica para esculpir piezas únicas inspiradas en el esplendor de las culturas maya, tolteca y mexica.`,
+      text: `👑 **Maestro Edgar Olvera · Escultor Lapidario de ARTE XIBALBÁ**\n\n• **Alta Joyería & Escultura Prehispánica:** Cada pectoral ceremonial, calavera sagrada y collar de obsidiana y jade es tallado y pulido a mano por el **Maestro Edgar Olvera** en su boutique y galería en el **Centro Histórico de la CDMX** (Bolivar 45, Locales 12 y 13).\n\n• [Perfil en Facebook de Edgar Olvera](https://www.facebook.com/edgar.olvera.706671)\n• [Instagram Oficial: @arte_xibalba](https://www.instagram.com/arte_xibalba)\n\nEl maestro selecciona personalmente bloques de jadeíta imperial, obsidiana negra pura y sodalita para dar vida a piezas con linaje ancestral.`,
       products: [PRODUCTS[0], PRODUCTS[1]],
       quickReplies: [
-        'Ver collares de autor',
-        '¿Dónde está el taller?',
+        'Ver collares del Maestro Edgar',
+        '¿Dónde está la boutique?',
         'Solicitar encargo a medida',
-        'Garantía de jade auténtico'
+        'Garantía de minerales auténticos'
       ]
     };
   }
 
-  // 2. ¿QUÉ ES PAKAL TUN?
+  // 2. ¿QUÉ ES ARTE XIBALBÁ?
   if (
-    norm.includes('que es pakal') ||
-    norm.includes('significa pakal') ||
-    norm.includes('pakal tun') ||
+    norm.includes('que es') ||
+    norm.includes('significa') ||
+    norm.includes('xibalba') ||
     norm.includes('concepto') ||
     norm.includes('historia') ||
     norm.includes('marca')
   ) {
     return {
-      text: `🏛️ **PAKAL TUN: El Escudo de Piedra**\n\nEn lengua maya, *«Pakal»* significa **escudo** y *«Tun»* significa **piedra**. PAKAL TUN es el *Escudo de Piedra*: una galería de joyería prehispánica de autor con piezas talladas a mano por el maestro **Yax Balam**.\n\nRendimos homenaje a la magnificencia de K'inich Janaab' Pakal creando pectorales monumentales, máscaras en mosaico y sartales finos para llevar la memoria viva de nuestras raíces.`,
-      products: [PRODUCTS[0], PRODUCTS[5]],
+      text: `🏛️ **ARTE XIBALBÁ: Santuario de Arte Prehispánico**\n\nEn la cosmovisión maya, **Xibalbá** es el reino sagrado del inframundo, lugar de transformación profunda, sabiduría oculta y renacimiento.\n\n**ARTE XIBALBÁ** honra este legado creando alta joyería mineral y escultura lapidaria con calaveras sagradas, deidades de la noche, tótems de obsidiana y piezas monumentales de jadeíta auténtica.\n\nNuestra boutique oficial se encuentra en **Bolivar 45, Centro Histórico de la CDMX**.`,
+      products: [PRODUCTS[0], PRODUCTS[1]],
       quickReplies: [
-        'Ver Máscara de Pakal en Jade',
+        'Ver Pectoral Deidad de Xibalbá',
         '¿Cómo saber si el jade es auténtico?',
-        'Ver todas las piezas',
-        '¿Quién es el creador?'
+        'Ver toda la colección',
+        '¿Dónde están ubicados?'
       ]
     };
   }
 
-  // 3. JADE AUTÉNTICO / MINERALES / MATERIALES
+  // 3. JADE AUTÉNTICO / OBSIDIANA / MINERALES
   if (
     norm.includes('jade') ||
     norm.includes('mineral') ||
@@ -76,18 +74,18 @@ export function processBotQuery(rawInput) {
     norm.includes('material')
   ) {
     return {
-      text: `💎 **Minerales Genuinos & Jadeíta Auténtica**\n\nEn PAKAL TUN no usamos imitaciones plásticas ni vidrios tintados. El maestro Yax Balam trabaja con:\n\n• **Jadeíta Genuina:** Piedra sagrada de Guatemala (valle del río Motagua) y yacimientos mexicanos. Fría al tacto, densa y de lustre vítreo.\n• **Turquesa Natural:** Piedra celeste asociada al fuego y la realeza.\n• **Obsidiana Pulida a Mano:** Vidrio volcánico negro y dorado.\n• **Lapislázuli & Ámbar:** Ensambles tradicionales de alta durabilidad.\n\nTodas las piezas cuentan con garantía de autenticidad mineral.`,
-      products: [PRODUCTS[0], PRODUCTS[2]],
+      text: `💎 **Minerales Genuinos & Certificación Lapidaria**\n\nEn **ARTE XIBALBÁ** trabajamos exclusivamente con minerales 100% auténticos:\n\n• **Jadeíta Genuina:** Extraída de fuentes tradicionales en México y Guatemala. Presenta translucidez natural a la luz, textura fría y densidad superior.\n• **Obsidiana Negra Volcánica:** Vidrio volcánico pulido a espejo, asociado al espejo sagrado de Tezcatlipoca.\n• **Sodalita Mineral & Hematita:** Tonos azules profundos y lustre metálico en ensambles de gran resistencia.\n• **Turquesa & Basalto:** Tallados en relieve con iconografía glífica.`,
+      products: [PRODUCTS[4], PRODUCTS[1]],
       quickReplies: [
-        'Collar Pakal de Jade',
-        'Collar de Lapislázuli',
-        '¿Cómo cuidar mi collar?',
-        'Conocer el taller en la Zona Oculta Maya'
+        'Brazalete Jade Imperial',
+        'Calavera de Obsidiana',
+        '¿Cómo cuidar mis piezas?',
+        'Visitar boutique en CDMX'
       ]
     };
   }
 
-  // 4. UBICACIÓN / TALLER / HORARIOS / VISITAS
+  // 4. UBICACIÓN / BOUTIQUE / HORARIOS / VISITAS
   if (
     norm.includes('taller') ||
     norm.includes('donde estan') ||
@@ -96,17 +94,16 @@ export function processBotQuery(rawInput) {
     norm.includes('donde comprar') ||
     norm.includes('tienda fisica') ||
     norm.includes('visitar') ||
-    norm.includes('zona oculta') ||
-    norm.includes('oculta') ||
-    norm.includes('templo')
+    norm.includes('bolivar') ||
+    norm.includes('cdmx')
   ) {
     return {
-      text: `📍 **Taller del Maestro Yax Balam · Zona Oculta Maya**\n\nEl taller y santuario sagrado se encuentra en la **Zona Oculta Maya**:\n\n🏛️ **Taller de Joyería Prehispánica · Zona Oculta Maya**\n📌 **Santuario Lapidario del Maestro Yax Balam**\n\nAquí el maestro Yax Balam realiza el tallado y labrado ceremonial en vivo. Podrás apreciar las piezas terminadas, elegir tus minerales en bruto y acordar tu encargo a medida. Puedes ascender y explorar la experiencia a través del **Templo Maya 3D** en el menú.`,
-      products: [PRODUCTS[0], PRODUCTS[4]],
+      text: `📍 **Boutique Oficial ARTE XIBALBÁ · Centro Histórico CDMX**\n\nTe esperamos personalmente en:\n\n📌 **Bolivar 45, Bazar Locales 12 y 13**\n🏛️ **Centro Histórico, Ciudad de México (CDMX)**\n📲 **WhatsApp:** 56 5738 8563\n📸 **Instagram:** @arte_xibalba · **TikTok:** @arte_xibalba_\n\nAquí puedes apreciar las piezas en exhibición, verificar su peso y translucidez con lámpara gemológica y adquirir piezas exclusivas.`,
+      products: [PRODUCTS[0], PRODUCTS[6]],
       quickReplies: [
-        'Horarios y contacto',
-        'Solicitar encargo personalizado',
-        'Ver catálogo de collares',
+        'Ver en Google Maps',
+        'Contactar por WhatsApp',
+        'Ver catálogo de piezas',
         'Cupones de descuento'
       ]
     };
@@ -122,13 +119,13 @@ export function processBotQuery(rawInput) {
     norm.includes('cotiz')
   ) {
     return {
-      text: `✨ **Piezas de Autor a Medida**\n\nEl maestro Yax Balam talla piezas exclusivas bajo encargo:\n\n1. **Selección del Mineral:** Eliges el tipo y tono de jade (verde esmeralda, jade imperial, corteza), turquesa u obsidiana.\n2. **Diseño de la Efigie:** Máscara de Pakal, rostro solar mexica, jaguar u orla ceremonial.\n3. **Calibre y Longitud:** Sartal adaptado a tu complexión y porte.\n\nPuedes solicitar tu encargo desde la sección **ENCARGOS** o contactando al taller sagrado en la **Zona Oculta Maya**.`,
-      products: [PRODUCTS[0], PRODUCTS[5]],
+      text: `✨ **Piezas Personalizadas & Encargos de Autor**\n\nEsculpimos y ensamblamos piezas exclusivas bajo encargo:\n\n1. **Selección del Mineral:** Bloques de jadeíta imperial, obsidiana negra pura o sodalita.\n2. **Diseño de la Efigie:** Calavera ceremonial, señor de Xibalbá, tecolote mensajero o glifos mayas.\n3. **Medida y Sartal:** Cuentas calibradas a tu complexión.\n\nContáctanos por WhatsApp al **56 5738 8563** o visítanos en **Bolivar 45, Locales 12 y 13, CDMX**.`,
+      products: [PRODUCTS[0], PRODUCTS[3]],
       quickReplies: [
-        'Ir a la sección de Encargos',
-        'Ver Pectoral Solar Mexica',
+        'Encargar pieza a medida',
+        'Pectoral Deidad de Xibalbá',
         '¿Cuánto tarda un encargo?',
-        '¿Dónde está el taller?'
+        '¿Dónde está la boutique?'
       ]
     };
   }
@@ -144,11 +141,11 @@ export function processBotQuery(rawInput) {
     norm.includes('cuanto cuesta')
   ) {
     return {
-      text: `🎟️ **Precios, Envíos & Códigos Especiales**\n\n• **Cupón Activo:** Usa el código **PAKALTUN15** o **JADE15** al finalizar tu compra para obtener un **15% de descuento** en tu pedido.\n• **Rango de Precios:** Desde $650 MXN (anillos y pulseras talladas) hasta $3,400 MXN (pectorales monumentales de colección).\n• **Envíos:** Envíos asegurados y protegidos a todo México. Empaque especial contra impactos para proteger las piedras.`,
-      products: [PRODUCTS[4], PRODUCTS[0]],
+      text: `🎟️ **Precios, Envíos & Códigos Especiales**\n\n• **Cupón Activo:** Usa el código **XIBALBA15** al finalizar tu compra para obtener un **15% de descuento** en tu pedido.\n• **Rango de Precios:** Desde $750 MXN (pulseras talladas de flor de jade) hasta $3,800 MXN (pectorales monumentales con estuche de galería).\n• **Envíos:** Envíos asegurados y protegidos a todo México con paquetería express. Empaque especial contra impactos.`,
+      products: [PRODUCTS[5], PRODUCTS[0]],
       quickReplies: [
         'Aplicar cupón en carrito',
-        'Ver pulseras y anillos ($650)',
+        'Ver pulseras y brazaletes',
         'Ver collares de autor',
         'Formas de pago'
       ]
@@ -163,11 +160,11 @@ export function processBotQuery(rawInput) {
     norm.includes('mantenimiento')
   ) {
     return {
-      text: `📿 **Guía de Cuidado para tu Joyería de Jade**\n\n• **Limpieza:** Usa un paño suave con agua tibia y jabón neutro. Seca de inmediato.\n• **Evita Químicos:** No rocíes perfumes, cloro ni aerosoles directamente sobre el jade o la turquesa.\n• **Almacenamiento:** Guarda tu pieza en su estuche o bolsa de tela suave separada de metales duros.\n• **Re-engarce:** Si el hilo o cordón requiere ajuste con los años, puedes llevarlo al taller sagrado en la Zona Oculta Maya para mantenimiento.`,
-      products: [PRODUCTS[0], PRODUCTS[3]],
+      text: `📿 **Guía de Cuidado para tu Joyería de ARTE XIBALBÁ**\n\n• **Limpieza:** Usa un paño suave ligeramente humedecido con agua tibia y jabón neutro. Seca de inmediato.\n• **Evita Químicos:** No rocíes perfumes, alcohol ni cloro directamente sobre el jade o la obsidiana.\n• **Almacenamiento:** Guarda tu pieza en su bolsa oficial de ARTE XIBALBÁ separada de metales filosos.\n• **Mantenimiento:** Ofrecemos servicio de re-engarce en nuestra boutique de Bolivar 45, Centro Histórico.`,
+      products: [PRODUCTS[0], PRODUCTS[4]],
       quickReplies: [
-        'Ver Collar Pakal de Jade',
-        '¿Dónde está el taller?',
+        'Ver Pectoral de Xibalbá',
+        '¿Dónde está la boutique?',
         'Ver catálogo completo'
       ]
     };
@@ -176,16 +173,15 @@ export function processBotQuery(rawInput) {
   // 8. BÚSQUEDA ESPECÍFICA POR PRODUCTO
   const matchingProds = PRODUCTS.filter(p => {
     const pName = normalizeText(p.name);
-    const pDesc = normalizeText(p.description);
-    const pTag = normalizeText(p.tagline);
     return (
       norm.includes(pName) ||
       pName.split(' ').some(w => w.length > 3 && norm.includes(w)) ||
-      (norm.includes('jaguar') && pName.includes('jaguar')) ||
-      (norm.includes('lapislazuli') && pName.includes('lapislazuli')) ||
+      (norm.includes('calavera') && pName.includes('calavera')) ||
+      (norm.includes('obsidiana') && pName.includes('obsidiana')) ||
+      (norm.includes('tecolote') && pName.includes('tecolote')) ||
+      (norm.includes('brazalete') && pName.includes('brazalete')) ||
       (norm.includes('pulsera') && pName.includes('pulsera')) ||
-      (norm.includes('anillo') && pName.includes('anillo')) ||
-      (norm.includes('pectoral') && pName.includes('pectoral'))
+      (norm.includes('deidad') && pName.includes('deidad'))
     );
   });
 
@@ -195,10 +191,10 @@ export function processBotQuery(rawInput) {
       text: `✨ **${prod.name}**\n\n${prod.description}\n\n• **Material:** ${prod.aroma?.salida || 'Mineral genuino'}\n• **Engarce:** ${prod.aroma?.corazon || 'Artesanal'}\n• **Precio:** $${prod.price.toLocaleString('es-MX')} MXN\n\n¿Deseas verla a detalle o agregarla a tu carrito?`,
       products: matchingProds.slice(0, 2),
       quickReplies: [
-        `Ver ${prod.name.split(' ')[0]} en detalle`,
+        `Ver en detalle`,
         'Ver todas las piezas',
         '¿Cómo comprar?',
-        '¿Quién es el creador?'
+        'Visitar boutique CDMX'
       ]
     };
   }
@@ -212,12 +208,12 @@ export function processBotQuery(rawInput) {
     norm.includes('inicio')
   ) {
     return {
-      text: `👋 **¡Saludos! Bienvenido a PAKAL TUN**\n\nSoy tu **Guía de Joyería Prehispánica**. Te acompaño a descubrir las creaciones lapidarias en jade, turquesa y obsidiana talladas a mano por el **maestro Yax Balam** en la **Zona Oculta Maya**.\n\n¿En qué te puedo asesorar hoy?\n• 📿 Descubrir nuestros **collares y pectorales ceremoniales**.\n• 💎 Conocer sobre el **jade auténtico** y sus yacimientos.\n• 📍 Conocer el **taller sagrado en la Zona Oculta Maya**.\n• ✨ Solicitar un **encargo personalizado a tu medida**.`,
+      text: `👋 **¡Saludos! Bienvenido a ARTE XIBALBÁ**\n\nSoy tu **Guía de Joyería Prehispánica & Escultura Lapidaria**. Te acompaño a descubrir nuestras obras en jadeíta imperial, obsidiana volcánica, sodalita y hematita esculpidas a mano en el Centro Histórico de la CDMX.\n\n¿En qué te puedo asesorar hoy?\n• 📿 Ver nuestros **collares y pectorales ceremoniales**.\n• 💎 Conocer sobre la autenticidad del **jade y la obsidiana**.\n• 📍 Visitar nuestra **boutique en Bolivar 45, Centro Histórico, CDMX**.\n• ✨ Solicitar una **pieza personalizada a tu medida**.`,
       products: [PRODUCTS[0], PRODUCTS[1]],
       quickReplies: [
-        '¿Quién es Yax Balam?',
-        'Ver collares de jade',
-        '¿Dónde está el taller?',
+        'Ver Pectoral Deidad de Xibalbá',
+        'Ver collares de obsidiana',
+        '¿Dónde está la boutique?',
         'Tengo un cupón de descuento'
       ]
     };
@@ -225,13 +221,13 @@ export function processBotQuery(rawInput) {
 
   // 10. RESPUESTA POR DEFECTO ORIENTADA
   return {
-    text: `🌿 Estoy aquí para ayudarte a explorar el arte lapidario de **PAKAL TUN**, tallado por el **maestro Yax Balam** en la **Zona Oculta Maya**.\n\nPuedes preguntarme por:\n• **Piezas:** *"Collar de Pakal"*, *"Pectorales"*, *"Pulseras y anillos"*.\n• **Materiales:** *"¿Cómo saber si el jade es auténtico?"*, *"Turquesa y obsidiana"*.\n• **Taller y creador:** *"¿Quién es Yax Balam?"*, *"¿Dónde queda el taller?"*.\n• **Encargos:** *"¿Hacen piezas a medida?"*.`,
+    text: `🌿 Estoy aquí para ayudarte a explorar el arte lapidario de **ARTE XIBALBÁ**, alta joyería prehispánica desde el Centro Histórico de la Ciudad de México.\n\nPuedes preguntarme por:\n• **Piezas:** *"Pectoral de Xibalbá"*, *"Calavera de obsidiana"*, *"Brazaletes"*, *"Tecolote"*\n• **Materiales:** *"¿El jade es auténtico?"*, *"Obsidiana negra"*\n• **Boutique física:** *"¿Dónde están ubicados?"*, *"Horarios y WhatsApp"*\n• **Encargos:** *"¿Hacen piezas a medida?"*.`,
     products: [PRODUCTS[0], PRODUCTS[1]],
     quickReplies: [
-      '¿Quién es Yax Balam?',
-      'Ver Collares de Autor',
-      'Conocer el taller en la Zona Oculta Maya',
-      '¿El jade es auténtico?'
+      'Ver Colección Completa',
+      '¿Dónde está la boutique?',
+      'Brazalete Jade Imperial',
+      '¿El mineral es genuino?'
     ]
   };
 }

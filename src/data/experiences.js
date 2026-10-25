@@ -1,23 +1,23 @@
 export const EXPERIENCES = [
   {
     id: 'collar-medida',
-    name: 'Collar Ceremonial a Medida',
+    name: 'Collar Ceremonial o Pectoral a Medida',
     category: 'encargos',
     categoryTitle: 'ENCARGO DE AUTOR',
-    tagline: 'Una pieza única, diseñada contigo y tallada a mano por el maestro Yax Balam.',
-    description: 'Eliges el mineral (jade, turquesa, obsidiana), el simbolismo (Pakal, jaguar, sol) y el largo del sartal. El maestro Yax Balam talla y engarza la pieza en su taller sagrado de la Zona Oculta Maya.',
-    image: './assets/images/pakal_tun_collar_jade.jpg',
+    tagline: 'Una pieza única, diseñada contigo y tallada a mano por el Maestro Edgar Olvera.',
+    description: 'Eliges el mineral (jadeíta imperial, obsidiana negra pura, sodalita), el simbolismo sagrado (calavera ceremonial, deidad de Xibalbá, tecolote mensajero o glifos) y el largo del sartal. El Maestro Edgar Olvera talla y engarza la pieza en su taller de Arte Xibalbá en el Centro Histórico de la CDMX.',
+    image: './assets/images/xibalba_deidad_inframundo.jpg',
     types: [
       {
         id: 'collar-medida-jade',
-        title: 'Collar de Jadeíta con Máscara Tallada',
-        duration: 'Según diseño',
-        modality: 'Taller Zona Oculta Maya o videollamada',
-        price: 3200,
+        title: 'Pectoral Esculpido a Mano con Cuentas Minerales',
+        duration: 'Según complejidad del diseño',
+        modality: 'Boutique Bolivar 45 CDMX o WhatsApp / Envíos',
+        price: 3600,
         includes: [
-          'Selección de jadeíta auténtica',
-          'Talla de máscara o efigie a elección',
-          'Sartal calibrado a tu medida'
+          'Selección personalizada de jadeíta, obsidiana o sodalita',
+          'Talla tridimensional de calavera o deidad a elección',
+          'Sartal ceremonial calibrado a tu medida'
         ]
       }
     ],
@@ -25,23 +25,23 @@ export const EXPERIENCES = [
   },
   {
     id: 'pieza-galeria',
-    name: 'Pectoral o Máscara de Galería',
+    name: 'Pectoral de Colección Oficial Arte Xibalbá',
     category: 'encargos',
     categoryTitle: 'PIEZA DE COLECCIÓN',
-    tagline: 'Obras de mosaico en jadeíta, lapislázuli y obsidiana.',
-    description: 'Piezas escultóricas de alta complejidad para coleccionistas, montadas en peana o preparadas para uso ceremonial.',
-    image: './assets/images/pakal_tun_galeria_vitrina.jpg',
+    tagline: 'Obras de alta lapidaria prehispánica con empaque de galería.',
+    description: 'Piezas monumentales de gran porte para coleccionistas y alta ceremonia tradicional, creadas por el Maestro Edgar Olvera.',
+    image: './assets/images/xibalba_bolsa_galeria.jpg',
     types: [
       {
         id: 'pieza-galeria-mosaico',
-        title: 'Pectoral en Mosaico de Minerales',
-        duration: 'Según diseño',
-        modality: 'Taller Zona Oculta Maya o videollamada',
-        price: 3400,
+        title: 'Collar Monumental con Medallón y Empaque Oficial',
+        duration: 'Entrega inmediata o a medida',
+        modality: 'Boutique Bolivar 45 CDMX o envío asegurado',
+        price: 3800,
         includes: [
-          'Diseño previo aprobado por ti',
-          'Mosaico de jadeíta, lapislázuli u obsidiana',
-          'Presentación para exhibición'
+          'Certificación de procedencia y autenticidad mineral',
+          'Medallón de jadeíta verde pulido a mano',
+          'Empaque y bolsa oficial Arte Xibalbá'
         ]
       }
     ],
@@ -49,23 +49,23 @@ export const EXPERIENCES = [
   },
   {
     id: 'sartal-anillo',
-    name: 'Sartales, Brazaletes & Anillos',
+    name: 'Brazaletes Sagrados & Pulseras de Jade Imperial',
     category: 'encargos',
     categoryTitle: 'AJUSTE PERSONALIZADO',
-    tagline: 'Combinaciones de piedras a tu medida de muñeca o dedo.',
-    description: 'Elige tu combinación de turquesa, jade, coral o ámbar, o un anillo esculpido en una sola pieza de mineral.',
-    image: './assets/images/pakal_tun_exhibidor_artesanal.png',
+    tagline: 'Combinaciones de minerales y glifos a tu medida de muñeca.',
+    description: 'Brazaletes esculpidos en jadeíta verde imperial con translucidez gemológica comprobada o esferas de obsidiana negra volcánica con tejido macramé de autor.',
+    image: './assets/images/xibalba_brazalete_jade_imperial.jpg',
     types: [
       {
         id: 'sartal-anillo-medida',
-        title: 'Sartal o Anillo Ajustado a tu Medida',
-        duration: 'Según disponibilidad',
-        modality: 'Taller Zona Oculta Maya o envío',
-        price: 650,
+        title: 'Brazalete con Talla Glífica a tu Medida',
+        duration: 'Ajuste inmediato',
+        modality: 'Boutique Bolivar 45 CDMX o envío nacional',
+        price: 1850,
         includes: [
-          'Ajuste de talla en el momento',
-          'Selección de piedras genuinas',
-          'Empaque de protección'
+          'Ajuste personalizado a tu circunferencia',
+          'Jadeíta imperial 100% auténtica',
+          'Estuche y garantía mineral'
         ]
       }
     ],

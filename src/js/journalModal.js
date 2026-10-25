@@ -48,7 +48,7 @@ export class JournalModal {
 
         <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
           <div style="font-size: 0.82rem; color: var(--color-beige);">
-            Joyería prehispánica de autor: <strong>#PakalTun</strong>
+            Joyería prehispánica de autor: <strong>#ArteXibalba</strong>
           </div>
           <button class="btn btn-secondary btn-sm" onclick="document.getElementById('journal-close-btn').click();">
             CERRAR CRÓNICA
