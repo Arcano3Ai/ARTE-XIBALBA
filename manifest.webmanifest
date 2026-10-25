@@ -1,7 +1,7 @@
 {
-  "name": "PAKAL TUN — Artesanal Studio y Mercado · Joyería Prehispánica",
-  "short_name": "PAKAL TUN",
-  "description": "PAKAL TUN · Artesanal Studio y Mercado: Joyería sagrada tallada a mano en jadeíta auténtica, obsidiana y ámbar por el Maestro Yax Balam en la Zona Oculta Maya.",
+  "name": "ARTE XIBALBÁ — Alta Joyería Prehispánica · Maestro Edgar Olvera",
+  "short_name": "ARTE XIBALBÁ",
+  "description": "ARTE XIBALBÁ: Joyería sagrada tallada a mano en jadeíta auténtica, obsidiana, turquesa y ámbar por el Maestro Edgar Olvera en el Centro Histórico de la CDMX.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
